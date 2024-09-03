@@ -71,7 +71,7 @@ export const Pricing = () => {
           {pricingTiers.map(( { title, monthlyPrice, buttonText, popular, inverse, features }, index ) => (
 
             <div key={index} className={twMerge("card", 
-            inverse && 'border-black bg-black text-white')}>
+              inverse && 'border-black bg-black text-white')}>
               <div className="flex justify-between">
                 <h3 className={twMerge("text-lg font-bold text-black/50", inverse && 'text-white' )}>{title}</h3>
                 {popular && (
