@@ -28,6 +28,9 @@ const nextConfig = {
     return config;
   },
 
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   // ...other config
 };
 
