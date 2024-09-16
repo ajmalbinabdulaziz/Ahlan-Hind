@@ -21,6 +21,7 @@ function Gallery() {
                 alt="Image"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
+              <p className="absolute w-fit pr-10 right-1 left-3 bottom-2 bg-black/50 text-white text-sm">Ayurveda Tourism</p>
             </div>
 
             <div className="hidden md:grid grid-rows-2 gap-2 min-h-full">
@@ -34,6 +35,7 @@ function Gallery() {
                           alt=""
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
+                        <p className="absolute w-fit pr-10 right-1 left-3 bottom-2 bg-black/50 text-white text-sm">The Himalayas</p>
                       </div>
                       <div className="relative hover:opacity-90 cursor-pointer ">  
                         <Image
@@ -42,6 +44,7 @@ function Gallery() {
                           alt=""
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
+                        <p className="absolute w-fit pr-10 right-1 left-3 bottom-2 bg-black/50 text-white text-sm">Hogenakkal</p>
                       </div>
 
                   </div>
@@ -54,6 +57,7 @@ function Gallery() {
                           alt=""
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
+                        <p className="absolute w-fit pr-10 right-1 left-3 bottom-2 bg-black/50 text-white text-sm">Tajmahal</p>
                       </div>
                       <div className="relative hover:opacity-90 cursor-pointer"> 
                           <Image
@@ -62,6 +66,7 @@ function Gallery() {
                             alt=""
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           />
+                        <p className="absolute w-fit pr-10 right-1 left-3 bottom-2 bg-black/50 text-white text-sm">Andaman</p>
                       </div>
 
                   </div>
