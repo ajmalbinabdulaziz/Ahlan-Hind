@@ -35,18 +35,19 @@ function EnquiryForm() {
   return (
     <section className="mt-10 border bg-white min-h-full">
 
+        <h1 className="text-center mt-3 text-[#469922] font-bold">Enquiry</h1>
         <div className="flex justify-between">
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col p-5 font-semibold font-sans">
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col p-3 font-semibold font-sans">
             <div className="flex space-x-2">
 
                 <input {...register("name", { required: true })} placeholder="Name" 
-                    className="mb-5 shadow border rounded p-1 form-input mt-1 block w-full ring-purple-500 outline-none focus:ring" type="text" name="name" />
+                    className="mb-5 shadow border rounded p-1 form-input mt-1 block w-full ring-[#83eb57] outline-none focus:ring" type="text" name="name" />
 
                 <input  {...register("phone", { required: true })} placeholder="Phone" 
-                    className="mb-5 shadow border rounded p-1 form-input mt-1 block w-full ring-purple-500 outline-none focus:ring" type="text" name="phone" />
+                    className="mb-5 shadow border rounded p-1 form-input mt-1 block w-full ring-[#83eb57] outline-none focus:ring" type="text" name="phone" />
 
                 <input  {...register("email", { required: true })} placeholder="Email" 
-                    className="mb-5 shadow border rounded p-1 form-input mt-1 block w-full ring-purple-500 outline-none focus:ring" type="text" name="email" />
+                    className="mb-5 shadow border rounded p-1 form-input mt-1 block w-full ring-[#83eb57] outline-none focus:ring" type="text" name="email" />
             </div>
 
             {/* <label>SUBJECT</label>
@@ -54,7 +55,7 @@ function EnquiryForm() {
 
             <textarea 
               {...register("message", { required: true })} placeholder="Message"
-              className=" shadow border rounded block mt-1 p-2 w-full ring-purple-500 outline-none focus:ring form-textarea"
+              className=" shadow border rounded block mt-1 p-2 w-full ring-[#83eb57] outline-none focus:ring form-textarea"
               rows={2} name="message"
             />
 
@@ -67,9 +68,10 @@ function EnquiryForm() {
             </div>      
 
             <input type="submit" 
-                  className="bg-purple-500 mt-3 h-10 w-full hover:bg-purple-400 cursor-pointer border rounded text-white font-bold" />
+                  className="bg-[#79ee47] mt-3 h-10 w-full hover:bg-[#aaf589] cursor-pointer border rounded text-white font-bold" />
           </form>
         </div>
+
 
     </section>
   )

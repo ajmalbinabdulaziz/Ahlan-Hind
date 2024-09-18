@@ -39,10 +39,17 @@ export const Header = () => {
               <a href="">Home</a>
               <a href="">About</a>
               <a href="">Packages</a>
-              <a href="">Hotels</a>
+              <a href="">Gallery</a>
+              <a href="">Hospitality</a>
+              {/* <a href="">Hotels</a>
+              {/* <a href="">Holidays</a>
+              <a href="">Resort</a>
+              <a href="">Houseboats</a> */}
+              {/* <a href="">Ayurveda Center</a>
+              <a href="">Speciality Hospital</a> */}
               {/* <a href="">Tours</a> */}
               {/* <a href="">Destinations</a> */}
-              <a href="">Testimonials</a>
+              {/* <a href="">Testimonials</a> */}
               <a href="">Contact</a>
               <button className='bg-[#0e2401] text-white px-4 py-2 rounded-lg font-medium inline-flex align-items justify-center tracking-tight'>
                 Sign Up</button>
