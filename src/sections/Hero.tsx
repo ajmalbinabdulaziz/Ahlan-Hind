@@ -42,7 +42,9 @@ export const Hero = () => {
                     <ArrowIcon className="h-5 w-5" />
                   </button>
                 </div>
-                <EnquiryForm />
+                <div className="mt-10">
+                  <EnquiryForm />
+                </div>
             </div>
 
             <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative">

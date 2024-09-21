@@ -36,8 +36,8 @@ export const Header = () => {
             <Image src={Logo} alt="Saas Logo" height={40} width={40} />
             <MenuIcon className="h-5 w-5 md:hidden" />
             <nav className='hidden md:flex gap-6 text-black/60 items-center'>
-              <a href="">Home</a>
-              <a href="">About</a>
+              <a href="/">Home</a>
+              <a href="/about">About</a>
               <a href="">Packages</a>
               <a href="">Gallery</a>
               <a href="">Hospitality</a>
