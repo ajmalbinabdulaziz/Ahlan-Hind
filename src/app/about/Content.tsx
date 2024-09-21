@@ -48,7 +48,7 @@ function Content() {
 
         </div>
 
-        <div className="grid grid-cols-3 py-6">
+        <div className="md:grid grid-cols-3 py-6">
           
           <div className="col-span-2 bg-white p-10">
             <h1 className="text-2xl font-sans mb-4">Unlock millennia of history, culture, hospitality & nature.</h1>
@@ -76,7 +76,7 @@ function Content() {
           
           </div>
 
-          <div>
+          <div className="hidden md:inline-block">
             Ad.
           </div>
 
