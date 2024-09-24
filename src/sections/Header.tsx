@@ -39,7 +39,7 @@ export const Header = () => {
               <a href="/">Home</a>
               <a href="/about">About</a>
               <a href="">Packages</a>
-              <a href="">Gallery</a>
+              <a href="/gallery">Gallery</a>
               <a href="">Hospitality</a>
               {/* <a href="">Hotels</a>
               {/* <a href="">Holidays</a>
