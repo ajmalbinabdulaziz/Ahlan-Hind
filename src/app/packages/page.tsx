@@ -3,7 +3,7 @@ import UpcomingPackages from "./UpcomingPackages"
 
 function page() {
   return (
-    <div className="bg-[radial-gradient(ellipse_150%_50%_at_top_left,#75eb2d,#768071_100%)] overflow-x-clip">
+    <div className="bg-[radial-gradient(ellipse_150%_50%_at_top_left,#75eb2d,#768071_100%)] overflow-x-clip pb-36">
         <PopularPackages />
         <UpcomingPackages />
     </div>

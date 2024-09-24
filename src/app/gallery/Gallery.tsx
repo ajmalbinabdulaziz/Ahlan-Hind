@@ -18,14 +18,14 @@ function Gallery() {
             Gallery
         </div>
         <div className="border w-auto h-auto flex flex-wrap flex-grow p-4 space-x-2 space-y-2">
-            <Image src={Alleppey} width={350} height={350} alt="Alleppey" className="grow hover:scale-110 transition-transform" />   
-            <Image src={Thekkady} width={350} height={350} alt="Thekkady" className="grow hover:scale-110 transition-transform" />   
-            <Image src={Wagamon} width={350} height={350} alt="Wagamon" className="grow hover:scale-110 transition-transform" />   
-            <Image src={Himalaya} width={350} height={350} alt="Himalaya" className="grow hover:scale-110 transition-transform" />   
-            <Image src={Andaman} width={350} height={350} alt="Andaman" className="grow hover:scale-110 transition-transform" />   
-            <Image src={Tajmahal} width={350} height={350} alt="Tajmahal" className="grow hover:scale-110 transition-transform" />   
-            <Image src={Hogenakkal} width={350} height={350} alt="Hodenakkal" className="grow hover:scale-110 transition-transform" />   
-            <Image src={Ayurveda} width={350} height={350} alt="Ayurveda" className="grow hover:scale-110 transition-transform" />                       
+            <Image src={Alleppey} width={350} height={350} alt="Alleppey" className="grow hover:scale-110 transition-transform duration-500" />   
+            <Image src={Thekkady} width={350} height={350} alt="Thekkady" className="grow hover:scale-110 transition-transform duration-500" />   
+            <Image src={Wagamon} width={350} height={350} alt="Wagamon" className="grow hover:scale-110 transition-transform duration-500" />   
+            <Image src={Himalaya} width={350} height={350} alt="Himalaya" className="grow hover:scale-110 transition-transform duration-500" />   
+            <Image src={Andaman} width={350} height={350} alt="Andaman" className="grow hover:scale-110 transition-transform duration-500" />   
+            <Image src={Tajmahal} width={350} height={350} alt="Tajmahal" className="grow hover:scale-110 transition-transform duration-500" />   
+            <Image src={Hogenakkal} width={350} height={350} alt="Hodenakkal" className="grow hover:scale-110 transition-transform duration-500" />   
+            <Image src={Ayurveda} width={350} height={350} alt="Ayurveda" className="grow hover:scale-110 transition-transform duration-500" />                       
         </div>
 
     </section>

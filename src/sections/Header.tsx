@@ -50,7 +50,7 @@ export const Header = () => {
               {/* <a href="">Tours</a> */}
               {/* <a href="">Destinations</a> */}
               {/* <a href="">Testimonials</a> */}
-              <a href="">Contact</a>
+              <a href="/contact">Contact</a>
               <button className='bg-[#0e2401] text-white px-4 py-2 rounded-lg font-medium inline-flex align-items justify-center tracking-tight'>
                 Sign Up</button>
             </nav>
