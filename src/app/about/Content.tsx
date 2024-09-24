@@ -14,7 +14,7 @@ import {
 
 function Content() {
   return (
-    <main className="container text-center pt-8 pb-20 md:pt-5 md:pb-10 bg-[radial-gradient(ellipse_150%_50%_at_bottom_left,#75eb2d,#f0feea_100%)] overflow-x-clip">
+    <main className="container text-center pt-8 pb-20 md:pt-5 md:pb-10 bg-[radial-gradient(ellipse_150%_50%_at_bottom_left,#75eb2d,#D2DCFF_100%)] overflow-x-clip">
 
         <div className="tag mb-6">
                 About us.
@@ -68,7 +68,7 @@ function Content() {
             <li className="text-left">Exclusive Round trip tours.</li>
             <li className="text-left">Best valued hotels and resorts.</li>
             <li className="text-left">Luxury Fleet of Vehicles.</li>
-            <li className="text-left">Create and Explore new destinations.</li>
+            <li className="text-left">Create and Explore new destinations.</li>   
 
             <hr className="my-4" />
             <p className="text-gray-700 whitespace-pre-wrap pb-2 font-semibold">With a commitment to create and provide the best value for our clientele, our partners and our team, we at Gateway Malabar Holidays welcome you to unlock the most exotic destination</p>       

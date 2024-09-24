@@ -38,7 +38,7 @@ export const Header = () => {
             <nav className='hidden md:flex gap-6 text-black/60 items-center'>
               <a href="/">Home</a>
               <a href="/about">About</a>
-              <a href="">Packages</a>
+              <a href="/packages">Packages</a>
               <a href="">Gallery</a>
               <a href="">Hospitality</a>
               {/* <a href="">Hotels</a>
