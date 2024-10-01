@@ -6,10 +6,31 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import Image from "next/image"
+import { urlFor } from "../../sanity/lib/image"
+import { client } from "@/sanity/lib/client"
 
 
 
-function UpcomingPackages() {
+interface dataProps {
+  length: number
+  map(arg0: (_upcomingPackage: any, idx: string) => import("react").JSX.Element): import("react").ReactNode | Iterable<import("react").ReactNode>
+  id: string
+  _createdAt: string
+  title: string
+  slug: {
+    current: string
+  }
+  category: {
+    title: string
+  }
+  mainImage: {
+    asset: []
+  }
+}
+
+async function UpcomingPackages({data}: {data: dataProps}) {
+
   return (
     <div className="container text-center mt-8">
       
@@ -17,24 +38,43 @@ function UpcomingPackages() {
         Upcoming Packages.
       </div>
 
-      <div className="py-8 md:ml-4 lg:ml-32 w-auto max-w-xl md:max-w-3xl px-10">
+      <div className="py-8 md:ml-4 lg:ml-32 w-auto md:max-w-3xl px-10">
 
-        <Carousel className="w-full max-w-3xl">
+        <Carousel className=" w-full max-w-4xl">
           <CarouselContent className="">
-            {Array.from({ length: 5 }).map((_, index) => (
+
+            {data?.map((_upcomingPackage: any, index: string) => (
+
+              // {Array.from({ length: 5 }).map((_, index) => (
+
               <CarouselItem key={index} className="pl-10 md:pl-4 lg:pl-8 md:basis-1/2 lg:basis-1/3">
-                <div className="p-1">
-                  <Card>
-                    <CardContent className="flex aspect-square items-center justify-center p-6">
-                      <span className="text-2xl font-semibold">{index + 1}</span>
-                    </CardContent>
-                  </Card>
+                <div className="p-1 ">
+
+                  {/* {data?.map((_upcomingPackage:any, idx: string) => ( */}
+
+                      <Card>
+                        <CardContent className="flex flex-col aspect-square items-center justify-center p-1 hover:scale-105
+                        transition-all border rounded-md">
+                          <div className="w-full h-full relative">
+                            <Image src={urlFor(_upcomingPackage?.mainImage).url()} layout="fill" alt="image" />
+                          </div>
+                          <p>₹ {_upcomingPackage?.price}</p>
+                        </CardContent>
+                      </Card>
+                      <p className="p-1 font-serif text-white">{_upcomingPackage?.title}</p>
+                  {/* ))} */}
+
                 </div>
               </CarouselItem>
+
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          {data.length > 3 ? (
+            <>
+               <CarouselPrevious />
+               <CarouselNext />
+            </>
+          ): "" }
         </Carousel>
 
       </div>
@@ -43,3 +83,6 @@ function UpcomingPackages() {
   )
 }
 export default UpcomingPackages
+
+
+

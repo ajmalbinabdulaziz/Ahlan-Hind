@@ -14,7 +14,10 @@ import {
 
 function Content() {
   return (
-    <main className="container text-center pt-8 pb-20 md:pt-5 md:pb-10 bg-[radial-gradient(ellipse_150%_50%_at_bottom_left,#75eb2d,#D2DCFF_100%)] overflow-x-clip">
+    <main 
+      // className="container text-center pt-8 pb-20 md:pt-5 md:pb-10 bg-[radial-gradient(ellipse_150%_50%_at_bottom_left,#75eb2d,#D2DCFF_100%)] overflow-x-clip"
+      className="container text-center pt-8 pb-20 md:pt-5 md:pb-10 "
+    >
 
         <div className="tag mb-6">
                 About us.
