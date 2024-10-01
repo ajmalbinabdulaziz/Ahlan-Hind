@@ -50,11 +50,6 @@ async function page() {
     return pack.category.title === "popular packages"
   }) 
 
-  // console.log(packages)
-  // console.log(packages.length)
-  // console.log("upcomingPackages")
-  // console.log(upcomingPackages.length)
-  // console.log(popularPackages)
 
   return (
     <div className="bg-[radial-gradient(ellipse_150%_50%_at_top_left,#75eb2d,#768071_100%)] overflow-x-clip pb-36">
