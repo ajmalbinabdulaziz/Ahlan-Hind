@@ -18,7 +18,7 @@ interface getPackagesProps {
   mainImage: string
 }
 
-export const getPackages = async ()=>{
+const getPackages = async ()=>{
   const query = `*[_type=="packages"]{
     _id,
     _createdAt,
