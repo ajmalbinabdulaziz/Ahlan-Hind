@@ -2,7 +2,7 @@ import Image from "next/image"
 import { urlFor } from "@/sanity/lib/image"
 
 
-interface getGalleryProps {
+interface getImagesProps {
   map(arg0: (gallery: any, index: any) => import("react").JSX.Element): import("react").ReactNode | Iterable<import("react").ReactNode>
   id: string
   _createdAt: string
@@ -12,7 +12,7 @@ interface getGalleryProps {
 
 
 
-function Gallery({data}: {data: getGalleryProps}) {
+function Gallery({data}: {data: getImagesProps}) {
   return (
     <section className="container text-center space-y-10 pt-10 pb-32">
         <div className="tag">
