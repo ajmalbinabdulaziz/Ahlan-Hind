@@ -2,6 +2,14 @@ import { client } from "@/sanity/lib/client"
 import Gallery from "./Gallery"
 
 
+interface getGalleryProps {
+  map(arg0: (gallery: any, index: any) => import("react").JSX.Element): import("react").ReactNode | Iterable<import("react").ReactNode>
+  id: string
+  _createdAt: string
+  title: string
+  mainImage: string
+}
+
 export const getGallery = async ()=>{
   const query = `*[_type=="gallery"]{
     _id,
@@ -18,10 +26,7 @@ export const getGallery = async ()=>{
 
 async function page() {
 
-  const data = await getGallery()
-  console.log(data)
-
-
+  const data: getGalleryProps = await getGallery()
   return (
     <div>
         <Gallery data={data} />
