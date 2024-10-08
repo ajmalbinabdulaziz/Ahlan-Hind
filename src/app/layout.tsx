@@ -3,7 +3,10 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/sections/Header";
 import { Footer } from "@/sections/Footer";
+import { ClerkProvider } from '@clerk/nextjs'
 // import clsx from "clsx";
+
+
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
@@ -18,15 +21,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="relative">
-      <body 
-      // className={clsx(dmSans.className, "antialiased bg-[#EAEEFE]")}
-      >
-      <Header />
-        {children}
-      <Footer />
-
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en" className="relative">
+        <body 
+        // className={clsx(dmSans.className, "antialiased bg-[#EAEEFE]")}
+        >
+          <Header />
+            {children}
+          <Footer />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

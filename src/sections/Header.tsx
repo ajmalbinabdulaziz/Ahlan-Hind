@@ -7,10 +7,21 @@ import SocialInsta from "@/assets/social-insta.svg"
 import SocialLinkedin from "@/assets/social-linkedin.svg"
 import SocialPin from "@/assets/social-pin.svg"
 import SocialYoutube from "@/assets/social-youtube.svg"
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton
+} from '@clerk/nextjs'
+import { currentUser } from "@clerk/nextjs/server";
+import { Button } from '@/components/ui/button';
 
 
+export const Header = async () => {
 
-export const Header = () => {
+  const user = await currentUser();
+  console.log(user)
   return (
     <header className='sticky top-0 backdrop-blur-sm z-20'>
 
@@ -51,8 +62,23 @@ export const Header = () => {
               {/* <a href="">Destinations</a> */}
               {/* <a href="">Testimonials</a> */}
               <a href="/contact">Contact</a>
-              <button className='bg-[#0e2401] text-white px-4 py-2 rounded-lg font-medium inline-flex align-items justify-center tracking-tight'>
-                Sign Up</button>
+
+
+              {/* <button className='bg-[#0e2401] text-white px-4 py-2 rounded-lg font-medium inline-flex align-items justify-center tracking-tight'>
+                Sign Up</button> */}
+
+
+
+            <SignedIn>
+                <UserButton />
+            </SignedIn>
+
+            <SignedOut>
+              <Button asChild variant="secondary">
+                <SignInButton />
+              </Button>
+            </SignedOut>
+
             </nav>
           </div>
         </div>
