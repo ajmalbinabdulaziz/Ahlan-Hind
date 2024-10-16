@@ -7,19 +7,19 @@ import { ClerkProvider } from '@clerk/nextjs'
 // import clsx from "clsx";
 
 
-
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Ahlan Hind",
-  description: "Template created by Frontend Tribe",
+  description: "A tourism based web app",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <ClerkProvider>
       <html lang="en" className="relative">

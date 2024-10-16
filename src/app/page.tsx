@@ -9,7 +9,10 @@ import { ProductList } from "@/sections/ProductList";
 // import { ProductShowcase } from "@/sections/ProductShowcase";
 import { Testimonials } from "@/sections/Testimonials";
 
+
+
 export default function Home() {
+
   return (
     <>
       <Hero />

@@ -5,8 +5,8 @@ import Image from "next/image"
 import ArrowIcon from "@/assets/arrow-right.svg"
 
 
-
 function Packages() {
+
   return (
     <section className="py-24 bg-white">
 

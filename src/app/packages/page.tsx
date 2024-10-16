@@ -4,6 +4,7 @@ import PopularPackages from "./PopularPackages"
 import UpcomingPackages from "./UpcomingPackages"
 // import { getPackages } from "@/sanity/lib"
 
+
 interface getPackagesProps {
   id: string
   _createdAt: string
