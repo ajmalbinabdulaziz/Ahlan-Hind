@@ -1,3 +1,5 @@
+'use client'
+
 import ArrowRight from '@/assets/arrow-right.svg'
 import Logo from "@/assets/logosaas.png"
 import Image from 'next/image';
@@ -20,8 +22,8 @@ import { Button } from '@/components/ui/button';
 
 export const Header = async () => {
 
-  const user = await currentUser();
-  console.log(user)
+  // const user = await currentUser();
+  // console.log(user)
   return (
     <header className='sticky top-0 backdrop-blur-sm z-20'>
 
@@ -67,7 +69,7 @@ export const Header = async () => {
               {/* <button className='bg-[#0e2401] text-white px-4 py-2 rounded-lg font-medium inline-flex align-items justify-center tracking-tight'>
                 Sign Up</button> */}
 
-
+ 
 
             <SignedIn>
                 <UserButton />

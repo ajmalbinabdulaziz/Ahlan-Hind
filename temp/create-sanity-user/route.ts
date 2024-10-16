@@ -10,14 +10,13 @@ export const GET = async (req: NextApiRequest) => {
         return NextResponse.redirect("/sign-in");
     }
 
-    const {id, firstName, lastName, username, emailAddresses} = user;
+    const {id, firstName, lastName, emailAddresses} = user;
 
     await client.createIfNotExists({
             _type: "user",
             _id: id,
             firstName,
             lastName,
-            username,
             email: emailAddresses[0].emailAddress
         })
 
