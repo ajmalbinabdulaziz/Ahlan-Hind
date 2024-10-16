@@ -8,17 +8,20 @@ import { ProductList } from "@/sections/ProductList";
 // import { Pricing } from "@/sections/Pricing";
 // import { ProductShowcase } from "@/sections/ProductShowcase";
 import { Testimonials } from "@/sections/Testimonials";
+import { currentUser } from "@clerk/nextjs/server";
 
 
+export default async function Home() {
 
-export default function Home() {
-
+  const user = await currentUser();
+  console.log(user)
+  
   return (
     <>
       <Hero />
       <LogoTicker />
       <ProductList />
-      {/* <ProductShowcase /> */}
+      {/* <ProductShowcase /> */}≠
       <Packages />
       {/* <Pricing /> */}
       <Testimonials />

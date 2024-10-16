@@ -57,7 +57,7 @@ export const Header = () => {
               {/* <button className='bg-[#0e2401] text-white px-4 py-2 rounded-lg font-medium inline-flex align-items justify-center tracking-tight'>
                 Sign Up</button> */}
 
-
+ 
 
             <SignedIn>
                 <UserButton />

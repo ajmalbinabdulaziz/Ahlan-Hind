@@ -9,6 +9,11 @@ export const userType = defineType({
     icon: UserIcon,
     fields: [
       defineField({
+        name: "username",
+        title: "Username",
+        type: "string",
+      }),
+      defineField({
         name: "firstName",
         title: "First Name",
         type: "string",
@@ -26,8 +31,8 @@ export const userType = defineType({
     ],
     preview: {
       select: {
-        title: 'lastName',
-        email: 'email',
+        title: 'username',
+        author: 'email',
       },
     },
   });
