@@ -1,11 +1,11 @@
-import {DocumentTextIcon} from '@sanity/icons'
+import {ImagesIcon} from '@sanity/icons'
 import {defineArrayMember, defineField, defineType} from 'sanity'
 
 export const galleryType = defineType({
   name: 'gallery',
   title: 'Gallery',
   type: 'document',
-  icon: DocumentTextIcon,
+  icon: ImagesIcon,
   fields: [
     defineField({
       name: 'title',

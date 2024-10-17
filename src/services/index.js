@@ -1,4 +1,5 @@
-import { sanityClient } from "../sanity";
+import { client } from "../sanity/lib/client"
+
 
 
 
@@ -17,12 +18,20 @@ export const getCategory = async ()=>{
 export const getPackages = async ()=>{
   const query = `*[_type=="packages"]{
     _id,
+    _createdAt,
+    title,
+    category[0]->{
+      title,
+    },
+    price,
+    mainImage,
     slug {
       current
     },
   }`
  
-  const packages = await sanityClient.fetch(query)
+  // const packages = await client.fetch<getPackagesProps[]>(query)
+  const packages = await client.fetch(query)
   return packages
 }
 

@@ -2,7 +2,7 @@
 import { client } from "../../sanity/lib/client"
 import PopularPackages from "./PopularPackages"
 import UpcomingPackages from "./UpcomingPackages"
-// import { getPackages } from "@/sanity/lib"
+import { getPackages } from "../../services"
 
 
 interface getPackagesProps {
@@ -17,26 +17,6 @@ interface getPackagesProps {
   }
   price: string
   mainImage: string
-}
-
-const getPackages = async ()=>{
-  const query = `*[_type=="packages"]{
-    _id,
-    _createdAt,
-    title,
-    category[0]->{
-      title,
-    },
-    price,
-    mainImage,
-    slug {
-      current
-    },
-  }`
- 
-  // const packages = await client.fetch<getPackagesProps[]>(query)
-  const packages = await client.fetch(query)
-  return packages
 }
 
 

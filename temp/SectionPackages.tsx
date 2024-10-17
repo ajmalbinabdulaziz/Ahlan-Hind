@@ -3,16 +3,9 @@ import Thekkady from "@/assets/thekkady.jpg"
 import Wagamon from "@/assets/wagamon.jpg"
 import Image from "next/image"
 import ArrowIcon from "@/assets/arrow-right.svg"
-import { getPackages } from "../services"
-import { urlFor } from "../sanity/lib/image"
-import Link from "next/link"
 
 
-async function Packages() {
-
-  const postData = await getPackages()
-    console.log("all packages")
-    console.log(postData)
+function Packages() {
 
   return (
     <section className="py-24 bg-white">
@@ -38,25 +31,20 @@ async function Packages() {
 
             </div>
 
-
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3
-                md:gap-6 p-3 md:px-1 max-w-6xl mx-auto mt-8'>
-                {postData?.map((data: any) => (
-                <Link key={data?._id} href={`/posts/${data?.slug?.current}`} target="_blank">
-                    <div className='border p-1 mb-4 group cursor-pointer overflow-hidden'>
-
-                        <Image className='h-48 w-full object-cover group-hover:scale-105
-                        transition-transform duration-200 ease-in-out' src={urlFor(data?.mainImage).url()} width={400} height={400} alt="" />
-                
-                        <div className="h-16">
-                        <p className="text-lg text-center pt-1 font-bold">{data?.title}</p>
-                        </div>
-                    </div>
-                </Link>
-                ))}
+            <div className="flex flex-col items-center md:flex md:flex-row gap-4 mt-12">
+                <div className="relative">
+                    <Image src={Alleppey} width={350} height={350} alt="Alleppey" />   
+                    <p className="absolute bottom-1 right-4 text-white text-lg font-bold">Alleppey</p>
+                </div>
+                <div className="relative">
+                    <Image src={Thekkady} width={350} height={350} alt="Thekkady" />   
+                    <p className="absolute bottom-1 right-4 text-white text-lg font-bold">Thekkady</p> 
+                </div>
+                <div className="relative">
+                    <Image src={Wagamon} width={350} height={350} alt="Wagamon" />   
+                    <p className="absolute bottom-1 right-4 text-white text-lg font-bold">Wagamon</p> 
+                </div>
             </div>
-
-
         </div>
 
     </section>

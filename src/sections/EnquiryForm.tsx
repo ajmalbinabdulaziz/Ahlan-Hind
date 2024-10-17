@@ -40,7 +40,7 @@ function EnquiryForm() {
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col p-3 font-semibold font-sans">
             <div className="flex space-x-2">
 
-                <input {...register("name", { required: true })} placeholder="Name" 
+                <input {...register("fullname", { required: true })} placeholder="Full Name" 
                     className="mb-5 shadow border rounded p-1 form-input mt-1 block w-full ring-[#83eb57] outline-none focus:ring" type="text" name="name" />
 
                 <input  {...register("phone", { required: true })} placeholder="Phone" 

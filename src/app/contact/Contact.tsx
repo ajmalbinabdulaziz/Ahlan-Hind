@@ -36,7 +36,7 @@ const Contact = () => {
     {submitted ? (<h3 className="text-center w-auto h-screen text-3xl pt-48 font-bold">Thank you for your message!</h3>)
     :
 
-      (<div className="grid grid-cols-1 px-5 pt-24 md:grid-cols-2  max-w-full">
+      (<div className="grid grid-cols-1 px-5 pt-12 md:grid-cols-2  max-w-full">
 
         <div className="">
           <h2 className="font-bold text-2xl text-center p-5 mt-5">Feel free to ask us anything!</h2>
@@ -57,9 +57,6 @@ const Contact = () => {
             <label>EMAIL</label>
             <input  {...register("email", { required: true })} className="mb-5 shadow border rounded py-1 form-input mt-1 block w-full ring-[#9ced6b] outline-none focus:ring" type="text" name="email" />
 
-            <label>SUBJECT</label>
-            <input  {...register("subject", { required: true })} className="mb-5 shadow border rounded py-1 form-input mt-1 block w-full ring-[#9ced6b] outline-none focus:ring" type="text" name="subject" />
-
             <label>MESSAGE</label>
             <textarea 
               {...register("message", { required: true })}
@@ -70,7 +67,6 @@ const Contact = () => {
             <div className="flex flex-col">
               {errors.name && <span className="text-red-500">The Name Field is Required</span>} 
               {errors.email && <span className="text-red-500">The Email Field is Required</span>}
-              {errors.subject && <span className="text-red-500">The Subject Field is Required</span>}
               {errors.message && <span className="text-red-500">The Message Field is Required</span>}    
             </div>          
 

@@ -1,11 +1,11 @@
-import {DocumentTextIcon} from '@sanity/icons'
+import {PackageIcon} from '@sanity/icons'
 import {defineArrayMember, defineField, defineType} from 'sanity'
 
 export const packagesType = defineType({
   name: 'packages',
   title: 'Packages',
   type: 'document',
-  icon: DocumentTextIcon,
+  icon: PackageIcon,
   fields: [
     defineField({
       name: 'title',

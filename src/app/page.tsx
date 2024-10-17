@@ -9,6 +9,7 @@ import { ProductList } from "@/sections/ProductList";
 // import { ProductShowcase } from "@/sections/ProductShowcase";
 import { Testimonials } from "@/sections/Testimonials";
 import { currentUser } from "@clerk/nextjs/server";
+import PopularPackages from "./packages/PopularPackages";
 
 
 export default async function Home() {
@@ -23,6 +24,7 @@ export default async function Home() {
       <ProductList />
       {/* <ProductShowcase /> */}≠
       <Packages />
+      {/* <PopularPackages /> */}
       {/* <Pricing /> */}
       <Testimonials />
       <CallToAction />
