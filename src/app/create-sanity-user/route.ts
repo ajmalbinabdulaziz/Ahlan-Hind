@@ -4,7 +4,7 @@ import { currentUser } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 
 
-export const GET = async (req: NextApiRequest) => {
+export const GET = async (req: Request) => {
     const user = await currentUser();
     if (!user) {
         return NextResponse.redirect("/sign-in");
