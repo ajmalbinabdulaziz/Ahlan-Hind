@@ -11,8 +11,6 @@ import Link from "next/link"
 async function Packages() {
 
   const postData = await getPackages()
-    console.log("all packages")
-    console.log(postData)
 
   return (
     <section className="py-24 bg-white">
