@@ -14,26 +14,25 @@ import { StringDecoder } from "string_decoder";
 import { NextResponse } from "next/server";
 import { NextApiRequest } from "next";
 import MainPage from "@/sections/MainPage";
-import { Main } from "next/document";
 
 
 export default async function Home() {
 
-  const user: any = await currentUser();
-  if (!user) {
-      // return NextResponse.redirect('http://localhost:3000/sign-in');
-      return <MainPage />
-  }
+  // const user: any = await currentUser();
+  // if (!user) {
+  //     // return NextResponse.redirect('http://localhost:3000/sign-in');
+  //     return <MainPage />
+  // }
 
-  const {id, username, firstName, lastName, emailAddresses} = user;
-  await client.createIfNotExists({
-    _type: "user",
-    _id: id,
-    username,
-    firstName,
-    lastName,
-    email: emailAddresses[0].emailAddress
-  })
+  // const {id, username, firstName, lastName, emailAddresses} = user;
+  // await client.createIfNotExists({
+  //   _type: "user",
+  //   _id: id,
+  //   username,
+  //   firstName,
+  //   lastName,
+  //   email: emailAddresses[0].emailAddress
+  // })
 
   return <MainPage />
 }
