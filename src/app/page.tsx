@@ -16,7 +16,9 @@ import { NextApiRequest } from "next";
 import MainPage from "@/sections/MainPage";
 
 
-export default async function Home() {
+
+export default function Home() {
+
 
   // const user: any = await currentUser();
   // if (!user) {
