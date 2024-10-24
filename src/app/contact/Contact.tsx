@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import CogImage from "@/assets/cog.png"
 import Image from "next/image";
+import { createEnquiry } from "../actions/createEnquiry";
 
 
 
@@ -49,13 +50,16 @@ const Contact = () => {
         <div className="max-w-full">
       
           <form 
-            // onSubmit={handleSubmit(onSubmit)} 
+            // action={createEnquiry}
             className="flex flex-col p-5 font-semibold font-sans">
             <label>FULL NAME</label>
             <input {...register("name", { required: true })} className="mb-5 shadow border rounded py-1 form-input mt-1 block w-full ring-[#9ced6b] outline-none focus:ring" type="text" name="name" />
 
             <label>EMAIL</label>
-            <input  {...register("email", { required: true })} className="mb-5 shadow border rounded py-1 form-input mt-1 block w-full ring-[#9ced6b] outline-none focus:ring" type="text" name="email" />
+            <input  {...register("email", { required: true })} className="mb-5 shadow border rounded py-1 form-input mt-1 block w-full ring-[#9ced6b] outline-none focus:ring" type="email" name="email" />
+
+            <label>PHONE</label>
+            <input  {...register("email", { required: true })} className="mb-5 shadow border rounded py-1 form-input mt-1 block w-full ring-[#9ced6b] outline-none focus:ring" type="text" name="phone" />
 
             <label>MESSAGE</label>
             <textarea 
