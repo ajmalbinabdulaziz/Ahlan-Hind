@@ -1,8 +1,7 @@
 'use client'
 
 import Head from "next/head";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useRef, useState } from "react";
 import CogImage from "@/assets/cog.png"
 import Image from "next/image";
 import { createEnquiry } from "../actions/createEnquiry";
@@ -12,6 +11,7 @@ import { createEnquiry } from "../actions/createEnquiry";
 const Contact = () => {
 
   const [ submitted, setSubmitted ] = useState(false)
+  const ref = useRef<HTMLFormElement>(null);
 
 
   return (
@@ -35,31 +35,36 @@ const Contact = () => {
 
         <div className="max-w-full">
       
-          <form 
-            action={createEnquiry}
+          <form ref={ref} 
+            action={async (formData) => {
+              setSubmitted(true)
+              ref.current?.reset()
+              await createEnquiry(formData)             
+
+            }}
             className="flex flex-col p-5 font-semibold font-sans">
             <label>FULL NAME</label>
-            <input  required 
+            <input  required minLength={7} maxLength={15}
               className="mb-5 shadow border rounded py-1 form-input mt-1 block w-full ring-[#9ced6b] outline-none focus:ring" 
               type="text" name="fullname" />
 
             <label>EMAIL</label>
-            <input  required 
+            <input  required minLength={7} maxLength={30}
               className="mb-5 shadow border rounded py-1 form-input mt-1 block w-full ring-[#9ced6b] outline-none focus:ring" 
               type="email" name="email" />
 
             <label>PHONE</label>
-            <input  required 
+            <input  required minLength={7} maxLength={15}
               className="mb-5 shadow border rounded py-1 form-input mt-1 block w-full ring-[#9ced6b] outline-none focus:ring" 
               type="text" name="phone" />
 
             <label>MESSAGE</label>
             <textarea 
-              required
+              required minLength={3} maxLength={200}
               className=" shadow border rounded block mt-1 py-2 w-full ring-[#9ced6b] outline-none focus:ring form-textarea"
               rows={8} name="message" />            
 
-            <input  
+            <input disabled={submitted}
               className="bg-[#75eb2d] mt-3 h-10 w-full hover:bg-[#9ced6b] cursor-pointer border rounded text-white font-bold" 
               type="submit" />
           </form>
