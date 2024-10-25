@@ -2,18 +2,12 @@
 
 import { createEnquiry } from "@/app/actions/createEnquiry"
 import { useRef, useState } from "react"
-
+import { toast } from "react-hot-toast";
 
 function EnquiryForm() {
 
-  const [ submitted, setSubmitted ] = useState(false)
   const ref = useRef<HTMLFormElement>(null);
 
-  // const handleSubmit = (e:React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-  //   e.preventDefault();
-  //   setClick(true)
-  //   console.log(click)
-  // }
   
   return (
     <section className="border bg-white min-h-full">
@@ -22,9 +16,10 @@ function EnquiryForm() {
     <div className="flex justify-between">
     <form ref={ref} className="flex flex-col p-3 font-semibold font-sans"
         action={async (formData) => {
-          // setSubmitted(true)
           ref.current?.reset()
-          await createEnquiry(formData)  
+          await createEnquiry(formData) 
+          toast.success('Enquiry submitted'); 
+
         }}
     >
 
@@ -50,10 +45,10 @@ function EnquiryForm() {
           rows={2} name="message"
         />
 
-        <button type="submit" disabled={submitted}
-              className={`mt-3 h-10 w-full cursor-pointer border rounded font-bold ${submitted ?'bg-[#b5f09c] text-black': 'bg-[#79ee47] text-white'}"`}
+        <button type="submit" 
+              className="mt-3 h-10 w-full cursor-pointer border rounded font-bold  text-black bg-[#79ee47]"
         >
-            {submitted ? 'Submitted' : 'Submit'}
+            Submit
          </button>       
       </form>
     </div>

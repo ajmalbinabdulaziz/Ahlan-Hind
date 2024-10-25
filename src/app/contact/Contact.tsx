@@ -5,6 +5,7 @@ import { useRef, useState } from "react";
 import CogImage from "@/assets/cog.png"
 import Image from "next/image";
 import { createEnquiry } from "../actions/createEnquiry";
+import { toast } from "react-hot-toast";
 
 
 
@@ -40,7 +41,7 @@ const Contact = () => {
               setSubmitted(true)
               ref.current?.reset()
               await createEnquiry(formData)             
-
+              toast.success('Enquiry submitted'); 
             }}
             className="flex flex-col p-5 font-semibold font-sans">
             <label>FULL NAME</label>

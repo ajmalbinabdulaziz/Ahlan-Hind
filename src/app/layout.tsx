@@ -4,7 +4,8 @@ import "./globals.css";
 import { Header } from "@/sections/Header";
 import { Footer } from "@/sections/Footer";
 import { ClerkProvider } from '@clerk/nextjs'
-// import clsx from "clsx";
+import ToasterProvider from "@/components/ToasterProvider";
+
 
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
@@ -26,6 +27,7 @@ export default async function RootLayout({
         <body 
         // className={clsx(dmSans.className, "antialiased bg-[#EAEEFE]")}
         >
+          <ToasterProvider />
           <Header />
             {children}
           <Footer />
