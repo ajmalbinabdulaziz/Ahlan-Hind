@@ -13,20 +13,6 @@ const Contact = () => {
 
   const [ submitted, setSubmitted ] = useState(false)
 
-  const { register,handleSubmit, formState: { errors } } = useForm();
-
-//   const onSubmit = async(data) => {
-//     await fetch('/api/createMessage', {
-//       method: 'POST',
-//       body: JSON.stringify(data),
-//     }).then(()=> {
-//       console.log(data);
-//       setSubmitted(true);
-//     }).catch((err) => {
-//       console.log(err);
-//       setSubmitted(false);
-//     })
-//   } 
 
   return (
     <>
@@ -50,32 +36,32 @@ const Contact = () => {
         <div className="max-w-full">
       
           <form 
-            // action={createEnquiry}
+            action={createEnquiry}
             className="flex flex-col p-5 font-semibold font-sans">
             <label>FULL NAME</label>
-            <input {...register("name", { required: true })} className="mb-5 shadow border rounded py-1 form-input mt-1 block w-full ring-[#9ced6b] outline-none focus:ring" type="text" name="name" />
+            <input  required 
+              className="mb-5 shadow border rounded py-1 form-input mt-1 block w-full ring-[#9ced6b] outline-none focus:ring" 
+              type="text" name="fullname" />
 
             <label>EMAIL</label>
-            <input  {...register("email", { required: true })} className="mb-5 shadow border rounded py-1 form-input mt-1 block w-full ring-[#9ced6b] outline-none focus:ring" type="email" name="email" />
+            <input  required 
+              className="mb-5 shadow border rounded py-1 form-input mt-1 block w-full ring-[#9ced6b] outline-none focus:ring" 
+              type="email" name="email" />
 
             <label>PHONE</label>
-            <input  {...register("email", { required: true })} className="mb-5 shadow border rounded py-1 form-input mt-1 block w-full ring-[#9ced6b] outline-none focus:ring" type="text" name="phone" />
+            <input  required 
+              className="mb-5 shadow border rounded py-1 form-input mt-1 block w-full ring-[#9ced6b] outline-none focus:ring" 
+              type="text" name="phone" />
 
             <label>MESSAGE</label>
             <textarea 
-              {...register("message", { required: true })}
+              required
               className=" shadow border rounded block mt-1 py-2 w-full ring-[#9ced6b] outline-none focus:ring form-textarea"
-              rows={8} name="message"
-                      />
+              rows={8} name="message" />            
 
-            <div className="flex flex-col">
-              {errors.name && <span className="text-red-500">The Name Field is Required</span>} 
-              {errors.email && <span className="text-red-500">The Email Field is Required</span>}
-              {errors.message && <span className="text-red-500">The Message Field is Required</span>}    
-            </div>          
-
-            <input type="submit" 
-                  className="bg-[#75eb2d] mt-3 h-10 w-full hover:bg-[#9ced6b] cursor-pointer border rounded text-white font-bold" />
+            <input  
+              className="bg-[#75eb2d] mt-3 h-10 w-full hover:bg-[#9ced6b] cursor-pointer border rounded text-white font-bold" 
+              type="submit" />
           </form>
 
         </div>

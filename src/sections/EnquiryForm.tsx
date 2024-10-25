@@ -23,13 +23,16 @@ function EnquiryForm() {
         <div className="flex space-x-2">
 
             <input placeholder="Full Name" required
-                className="mb-5 shadow border rounded p-1 form-input mt-1 block w-full ring-[#83eb57] outline-none focus:ring" type="text" name="fullname" />
+                className="mb-5 shadow border rounded p-1 form-input mt-1 block w-full ring-[#83eb57] outline-none focus:ring" 
+                type="text" name="fullname" />
 
             <input placeholder="Phone" required
-                className="mb-5 shadow border rounded p-1 form-input mt-1 block w-full ring-[#83eb57] outline-none focus:ring" type="text" name="phone" />
+                className="mb-5 shadow border rounded p-1 form-input mt-1 block w-full ring-[#83eb57] outline-none focus:ring" 
+                type="text" name="phone" />
 
             <input placeholder="Email" required
-                className="mb-5 shadow border rounded p-1 form-input mt-1 block w-full ring-[#83eb57] outline-none focus:ring" type="email" name="email" />
+                className="mb-5 shadow border rounded p-1 form-input mt-1 block w-full ring-[#83eb57] outline-none focus:ring" 
+                type="email" name="email" />
         </div>
 
 
