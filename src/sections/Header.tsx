@@ -22,7 +22,7 @@ export const Header = () => {
   return (
     <header className='sticky top-0 backdrop-blur-sm z-20'>
 
-      <div className="flex justify-center items-center py-7 text-black text-sm bg-[radial-gradient(ellipse_100%_100%_at_bottom_left,#75eb2d,#f0feea_100%)]">
+      <div className="flex justify-center items-center py-7 text-white text-sm bg-[#780540]">
         {/* <div className='inline-flex gap-1 items-center'> */}
           {/* <p>Get started for free</p> */}
           <div className="flex justify-center gap-6">
