@@ -61,9 +61,9 @@ export const Hero = () => {
               }}
               /> */}
 
-            <div className="rotate-6 mt-36 ml-44 md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 
+            <div className="p-2 rounded-md md:rotate-6 md:mt-36 md:ml-44 md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 
               lg:left-0 ">
-                <div className=" border-8 border-pink-700">
+                <div className="md:border-8 md:border-pink-700">
               
                   <HomeCarousel />             
               
