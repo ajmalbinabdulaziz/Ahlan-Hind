@@ -1,7 +1,6 @@
 'use client'
 import Logo from "@/assets/logosaas.png"
 import Image from 'next/image';
-import MenuIcon from '@/assets/menu.svg'
 import SocialX from "@/assets/social-x.svg"
 import SocialInsta from "@/assets/social-insta.svg"
 import SocialLinkedin from "@/assets/social-linkedin.svg"
@@ -13,8 +12,8 @@ import {
   SignedOut,
   UserButton
 } from '@clerk/nextjs'
-// import { currentUser } from "@clerk/nextjs/server";
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button'
+import { HamburgerMenu } from "@/components/HamburgerMenu"
 
 
 export const Header = () => {
@@ -23,8 +22,6 @@ export const Header = () => {
     <header className='sticky top-0 backdrop-blur-sm z-20'>
 
       <div className="flex justify-center items-center py-7 text-white text-sm bg-[#780540]">
-        {/* <div className='inline-flex gap-1 items-center'> */}
-          {/* <p>Get started for free</p> */}
           <div className="flex justify-center gap-6">
           <SocialX />
           <SocialInsta />
@@ -32,17 +29,15 @@ export const Header = () => {
           <SocialPin />
           <SocialYoutube />
         </div>
-          {/* <ArrowRight className="h-4 w-4 inline-flex justify-center items-center" /> */}
-        {/* </div> */}
       </div>
-
-      {/* Navbar  */}
 
       <div className='py-5'>
         <div className='container'>
           <div className='flex items-center justify-between'>
-            <Image src={Logo} alt="Saas Logo" height={40} width={40} />
-            <MenuIcon className="h-5 w-5 md:hidden" />
+            <a href="/">
+              <Image src={Logo} alt="Saas Logo" height={40} width={40} />
+            </a>
+            <HamburgerMenu />
             <nav className='hidden md:flex gap-6 text-black/60 items-center'>
 
               <a href="/">Home</a>
@@ -52,12 +47,6 @@ export const Header = () => {
               <a href="">Hospitality</a>
 
               <a href="/contact">Contact</a>
-
-
-              {/* <button className='bg-[#0e2401] text-white px-4 py-2 rounded-lg font-medium inline-flex align-items justify-center tracking-tight'>
-                Sign Up</button> */}
-
- 
 
             <SignedIn>
                 <UserButton />

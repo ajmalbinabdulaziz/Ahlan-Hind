@@ -70,13 +70,22 @@ export function HomeCarousel() {
 
         {data.map((ddd:any, index:string) => (
           <CarouselItem key={index}>
-            <div className="">
-              <Card>
-                <CardContent className="relative flex aspect-square items-center justify-center ">
-                    <Image src={ddd} alt="image" fill />
-                </CardContent>
-              </Card>
-            </div>
+            {/* <div className="p-1 border-x-4 border-cyan-800 ">
+            <div className="p-4 border-y-4 border-pink-700 ">
+            <div className="p-3 border-y-4 border-pink-700 ">
+            <div className="p-2 border-y-4 border-pink-700 ">
+
+              <div className="p-1 border-y-4 border-pink-700 "> */}
+                <Card>
+                  <CardContent className="relative flex aspect-square items-center justify-center ">
+                      <Image src={ddd} alt="image" fill />
+                  </CardContent>
+                </Card>
+              {/* </div>
+              </div>
+              </div>
+              </div>
+            </div> */}
           </CarouselItem>
         ))}
 

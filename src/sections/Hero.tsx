@@ -1,6 +1,5 @@
 'use client'
 import ArrowIcon from "@/assets/arrow-right.svg"
-import CogImage from "@/assets/cog.png"
 import CylinderImage from "@/assets/cylinder.png"
 import noodleImage from "@/assets/noodle.png"
 import { motion, useScroll, useTransform } from 'framer-motion'
@@ -62,8 +61,13 @@ export const Hero = () => {
               }}
               /> */}
 
-            <div className="rotate-6 mt-36 ml-44 md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 lg:left-0  ">
-             <HomeCarousel />             
+            <div className="rotate-6 mt-36 ml-44 md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 
+              lg:left-0 ">
+                <div className=" border-8 border-pink-700">
+              
+                  <HomeCarousel />             
+              
+                </div>
             </div>
                
               <motion.img src={CylinderImage.src} width={220} height={220} alt="Cylinder Image"
