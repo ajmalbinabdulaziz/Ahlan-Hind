@@ -25,7 +25,7 @@ export const ProductList = () => {
           <div className="flex justify-center">
             <div className="tag">Select your interests</div>
           </div>
-            <h2 className="section-title mt-5 mb-16 bg-gradient-to-b from-black to-[#780540] text-transparent">
+            <h2 className="text-5xl md:text-5xl font-bold text-[#350ca8] mt-6 mb-10">
                 Trust our experience to share natural beauty!
             </h2>
             {/* <p className="section-description mt-5 text-[#1c4205]">

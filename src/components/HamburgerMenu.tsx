@@ -3,7 +3,6 @@
 import * as React from "react"
 import MenuIcon from '@/assets/menu.svg'
 
-import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import {
   Command,

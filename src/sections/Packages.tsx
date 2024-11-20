@@ -23,8 +23,8 @@ async function Packages() {
                 </div>
                 
                 <div className="section-heading flex flex-col gap-2">
-                    <h2 className="section-title text-5xl md:text-5xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#780540] text-transparent bg-clip-text mt-6">Explore Kerala Tourism</h2>
-                    <p className="section-description mt-4">
+                    <h2 className="text-center text-5xl md:text-5xl font-bold text-[#780540] mt-6">Explore Kerala Tourism</h2>
+                    <p className="section-description text-[#460225] mt-4">
                         The South-west state of India, Kerala enjoys all the blessings of nature – a long coastline, 
                         mountain stretches, meandering rivers, stunning water falls, dense forests, surf washed beaches, & dazzling monsoon.
                     </p>

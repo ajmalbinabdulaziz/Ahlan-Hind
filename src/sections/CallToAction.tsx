@@ -21,7 +21,7 @@ export const CallToAction = () => {
       <div className="container">
 
         <div className="section-heading relative">
-          <h2 className="section-title">Sign up for free today</h2>
+          <h2 className="text-center text-5xl md:text-5xl font-bold text-[#019c76] mt-6">Sign up to Explore</h2>
           <p className="section-description mt-5">
           With a commitment to create and provide the best value for our clientele, our partners and our team, 
           we at Ahlan-Hind welcome you to unlock the most beautiful destinations

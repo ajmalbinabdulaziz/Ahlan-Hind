@@ -37,7 +37,9 @@ export const Header = () => {
             <a href="/">
               <Image src={Logo} alt="Saas Logo" height={40} width={40} />
             </a>
-            <HamburgerMenu />
+            <div className="md:hidden">
+              <HamburgerMenu />
+            </div>
             <nav className='hidden md:flex gap-6 text-black/60 items-center'>
 
               <a href="/">Home</a>
