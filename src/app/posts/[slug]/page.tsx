@@ -1,4 +1,3 @@
-import { myPortableTextComponents } from "@/components/PortableTextComponent";
 import { urlFor } from "@/sanity/lib/image";
 import { getPackageDetails } from "@/services"
 import { PortableText } from "next-sanity";
