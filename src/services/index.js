@@ -8,7 +8,7 @@ export const getCategory = async ()=>{
         title,       
       }`
 
-    const categories = await sanityClient.fetch(query)
+    const categories = await client.fetch(query)
 
     return categories
       
@@ -46,11 +46,12 @@ export const getPackageDetails = async (slug) => {
     description,
     mainImage,
     slug,
+    price,
     body, 
   }`;
 
 
-  const packageDetails = await sanityClient.fetch(query, { slug })
+  const packageDetails = await client.fetch(query, { slug })
 
   return packageDetails
     

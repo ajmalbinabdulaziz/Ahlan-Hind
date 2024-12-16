@@ -28,7 +28,7 @@ const Contact = () => {
 
         <div className="">
           <h2 className="font-bold text-2xl text-center p-5 mt-5">Feel free to ask us anything!</h2>
-          <Image className="mx-auto m-5 " src={CogImage} width={200} height={200} alt="" />
+          <Image className="mx-auto m-5" src={CogImage} width={200} height={200} alt="" />
           <p className="p-5">
             If you have any suggestions, please let me know. Your suggestions are highly appreciated. Keep dropping your priceless opinions.
           </p>

@@ -68,8 +68,8 @@ export function HamburgerMenu() {
           <CommandList>
             <CommandEmpty>No framework found.</CommandEmpty>
             <CommandGroup>
-              {frameworks.map((framework) => (
-                <a href={framework.href}>
+              {frameworks.map((framework, index) => (
+                <a href={framework.href} key={index}>
                 <CommandItem
                   key={framework.value}
                   value={framework.value}

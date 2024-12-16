@@ -3,7 +3,7 @@ import ArrowIcon from "@/assets/arrow-right.svg"
 import CylinderImage from "@/assets/cylinder.png"
 import noodleImage from "@/assets/noodle.png"
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import EnquiryForm from "./EnquiryForm";
 import { HomeCarousel } from "@/components/HomeCarousel"
 import mountainView from '@/assets/homeImages/mountainView.jpg'
@@ -11,6 +11,7 @@ import mountainView from '@/assets/homeImages/mountainView.jpg'
 
  
 export const Hero = () => {
+
   const heroRef = useRef(null)
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -18,6 +19,21 @@ export const Hero = () => {
   })
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150])
 
+  const [title, setTitle] = useState('');
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch('/api', {
+        method: 'POST',
+      });
+      const data = await response.json();
+      setTitle(data);
+    }
+
+    fetchData();
+  }, []);
+
+  console.log(`data  ${title}`)
 
   return(
     <section ref={heroRef} 
@@ -51,9 +67,9 @@ export const Hero = () => {
             <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative">
 
 
-              <div className="p-2 rounded-md md:rotate-6 md:mt-36 md:ml-44 md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 
+              <div className="md:rotate-6 md:mt-36 md:ml-44 md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 
                 lg:left-0 ">
-                  <div className="md:border-8 md:border-pink-700">
+                  <div className="">
                 
                     <HomeCarousel />             
                 
