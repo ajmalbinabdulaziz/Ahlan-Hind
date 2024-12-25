@@ -5,6 +5,7 @@ import { PortableText } from "next-sanity";
 import Head from "next/head";
 import Image from "next/image";
 import { myPortableTextComponents } from "../../../components/PortableTextComponents";
+import { any } from "zod";
 
 
 interface IParams {
@@ -14,6 +15,9 @@ interface IParams {
 
 async function page({ params }: { params: IParams }) {
     const postDataDetails = await getPackageDetails(params?.slug)
+
+    const port: any = myPortableTextComponents
+
     console.log(postDataDetails)
     console.log(`slug - ${params.slug}`)
   return (
@@ -43,7 +47,7 @@ async function page({ params }: { params: IParams }) {
 
             <div className="py-3 mt-2 mb-5">
 
-            <PortableText value={postDataDetails?.body} components={myPortableTextComponents} />
+            <PortableText value={postDataDetails?.body} components={port} />
             </div>   
 
             <hr className='max-w-full mt-5 border border-purple-500 border-t-0'/>                  
