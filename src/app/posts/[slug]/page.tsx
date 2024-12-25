@@ -1,8 +1,11 @@
+'use client'
 import { urlFor } from "@/sanity/lib/image";
 import { getPackageDetails } from "@/services"
 import { PortableText } from "next-sanity";
 import Head from "next/head";
 import Image from "next/image";
+import { myPortableTextComponents } from "../../../components/PortableTextComponents";
+
 
 interface IParams {
     slug?: string;
@@ -40,7 +43,7 @@ async function page({ params }: { params: IParams }) {
 
             <div className="py-3 mt-2 mb-5">
 
-            <PortableText value={postDataDetails?.body}  />
+            <PortableText value={postDataDetails?.body} components={myPortableTextComponents} />
             </div>   
 
             <hr className='max-w-full mt-5 border border-purple-500 border-t-0'/>                  
