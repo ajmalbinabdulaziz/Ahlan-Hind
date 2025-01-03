@@ -40,7 +40,7 @@ export const Header = () => {
             <div className="md:hidden">
               <HamburgerMenu />
             </div>
-            <nav className='hidden md:flex gap-6 text-black/60 items-center'>
+            <nav className='hidden md:flex gap-6 text-black/80 items-center'>
 
               <a href="/">Home</a>
               <a href="/about">About</a>

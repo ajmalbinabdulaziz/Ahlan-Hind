@@ -28,12 +28,12 @@ interface dataProps {
 }
 
 
-function PopularPackages( {data}: {data: dataProps} ) {
+function Packages( {data}: {data: dataProps} ) {
   return (
     <div className="container text-center pt-8">
       
       <div className="tag bg-white">
-          Popular Packages.
+          Popular Packages
       </div>
 
       <div className="py-8 md:ml-4 lg:ml-32 w-auto md:max-w-3xl px-10">
@@ -78,4 +78,4 @@ function PopularPackages( {data}: {data: dataProps} ) {
     </div>
   )
 }
-export default PopularPackages
+export default Packages

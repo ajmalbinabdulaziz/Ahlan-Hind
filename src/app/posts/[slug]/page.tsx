@@ -18,8 +18,6 @@ async function page({ params }: { params: IParams }) {
 
     const port: any = myPortableTextComponents
 
-    console.log(postDataDetails)
-    console.log(`slug - ${params.slug}`)
   return (
     <main>
     <Head>

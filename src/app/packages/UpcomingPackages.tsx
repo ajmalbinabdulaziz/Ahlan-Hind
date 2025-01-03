@@ -69,7 +69,7 @@ async function UpcomingPackages({data}: {data: dataProps}) {
 
             ))}
           </CarouselContent>
-          {data.length > 3 ? (
+          {data?.length > 3 ? (
             <>
                <CarouselPrevious />
                <CarouselNext />
