@@ -41,12 +41,14 @@ async function page() {
             >  
             <div className="absolute z-10 mt-56 left-20 right-20 text-center text-4xl text-white font-bold">"A journey of a thousand miles begins with a single step."</div>
 
-            <div className="absolute opacity-60 bg-[radial-gradient(ellipse_150%_50%_at_bottom_left,#75eb2d,#768071_100%)] h-screen w-full" />
+            <div className="absolute opacity-60 bg-[radial-gradient(ellipse_150%_50%_at_top_left,#ebe6e1,#eb9d86_100%)] h-screen w-full" />
           </div>
 
-          <div className="mt-[350px] 
+          <div className="mt-[300px] 
           overflow-x-clip pb-36 bg-white ">
+
             <Packages data={allPackages} />
+            
           </div>
 
       </section>

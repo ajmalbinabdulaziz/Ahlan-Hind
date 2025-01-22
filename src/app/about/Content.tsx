@@ -32,7 +32,7 @@ function Content() {
 
              {/* Carousal */}
 
-            <div className="md:grid grid-cols-3 gap-10 p-10 justify-around border bg-white mt-[350px] "> 
+            <div className="md:grid grid-cols-3 gap-10 p-10 justify-around border bg-white mt-[300px] "> 
 
                 <div className="col-span-2">
                     

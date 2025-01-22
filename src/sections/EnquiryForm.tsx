@@ -10,7 +10,7 @@ function EnquiryForm() {
 
   
   return (
-    <section className="border bg-white max-h-min">
+    <section className="border bg-white min-w-min max-h-min">
 
     <h1 className="text-center mt-3 text-[#780540] font-bold">Enquiry</h1>
     <div className="flex justify-between">

@@ -43,8 +43,6 @@ function MainPackages( {data}: {data: dataProps} ) {
 
             {data?.map((_popularPackage: any, index: string) => (
 
-              // {Array.from({ length: 5 }).map((_, index) => (
-
               <CarouselItem key={index} className="pl-10 md:pl-4 lg:pl-8 md:basis-1/2 lg:basis-1/3">
                 <div className="p-1 ">
 

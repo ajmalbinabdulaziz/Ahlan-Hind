@@ -1,14 +1,10 @@
-import { Card, CardContent } from "@/components/ui/card"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
 import Image from "next/image"
 import { urlFor } from "../../sanity/lib/image"
-
+import Link from "next/link"
+import { FaStar } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
+import { IoTime } from "react-icons/io5";
+import { HiUsers } from "react-icons/hi2";
 
 
 interface dataProps {
@@ -30,50 +26,51 @@ interface dataProps {
 
 function Packages( {data}: {data: dataProps} ) {
   return (
-    <div className="container text-center pt-8">
+    <div className="text-center pt-8">
       
       <div className="tag bg-white">
           Popular Packages
       </div>
 
-      <div className="py-8 md:ml-4 lg:ml-32 w-auto md:max-w-3xl px-10">
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3
+                md:gap-6 p-3 md:px-1 max-w-6xl mx-auto mt-8'>
+              {data?.map((_popularPackage: any, index: string) => (
+                <Link key={_popularPackage?._id} href={`/posts/${_popularPackage?.slug?.current}`} target="_blank">
+                    <div className='relative border mb-4 group cursor-pointer overflow-hidden'>
 
-        <Carousel className=" w-full max-w-4xl">
-          <CarouselContent className="">
+                        <Image className='h-80 w-full object-cover group-hover:scale-105
+                        transition-transform duration-200 ease-in-out' src={urlFor(_popularPackage?.mainImage).url()} width={400} height={400} alt="" />
 
-            {data?.map((_popularPackage: any, index: string) => (
+                        <p className="bg-black w-full absolute top-10 left-32 right-2 rotate-45 font-medium p-1 text-white">
+                          USD  {_popularPackage?.price}/-
+                        </p>
 
-              // {Array.from({ length: 5 }).map((_, index) => (
+                        <div className="flex px-1 bg-white w-1/3 absolute top-4 left-6 right-2 font-medium">
+                          (5.0)
+                          <p className="py-1"><FaStar color="gold" /></p>
+                          <p className="py-1"><FaStar color="gold" /></p>
+                          <p className="py-1"><FaStar color="gold" /></p>
+                          <p className="py-1"><FaStar color="gold" /></p>
+                          <p className="py-1"><FaStar color="gold" /></p>                  
+                        </div>
 
-              <CarouselItem key={index} className="pl-10 md:pl-4 lg:pl-8 md:basis-1/2 lg:basis-1/3">
-                <div className="p-1 ">
+                        <div className="flex justify-around absolute bottom-40 left-4 right-6 font-medium">
+                          <p className="py-1 text-white"><FaLocationDot color="gold" />Location</p>
+                          <p className="py-1 text-white"><IoTime color="gold" />Days</p>
+                          <p className="py-1 text-white"><HiUsers color="gold" />Pax</p>     
+                        </div>
 
-                      <Card>
-                        <CardContent className="flex flex-col aspect-square items-center justify-center p-1 hover:scale-105 
-                        transition-all border rounded-md">
-                          <div className="w-full h-full relative">
-                            <Image src={urlFor(_popularPackage?.mainImage).url()} layout="fill" alt="image" />
-                          </div>
-                          <p>₹ {_popularPackage?.price}</p>
-                        </CardContent>
-                      </Card>
-                      <p className="p-1 font-serif text-white">{_popularPackage?.title}</p>
+                        <div className="h-20 mt-2">
+                          <p className="text-lg text-center p-6 pt-1 font-bold">{_popularPackage?.title}</p>
+                        </div>
 
-                </div>
-              </CarouselItem>
-
-            ))}
-          </CarouselContent>
-          {data?.length > 3 ? (
-            <>
-               <CarouselPrevious />
-               <CarouselNext />
-            </>
-          ): "" }
-       
-        </Carousel>
-
-      </div>
+                        <div className="py-2">
+                          <p className="w-2/3 text-black bg-yellow-400 p-2 mx-auto font-bold">Book Now</p>
+                        </div>
+                    </div>
+                </Link>
+                ))}
+            </div>
 
     </div>
   )
