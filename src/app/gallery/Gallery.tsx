@@ -49,7 +49,7 @@ function Gallery({data}: {data: getImagesProps}) {
       </div>
 
 
-      <div className="container text-center space-y-10 pt-10 pb-32 mt-40">
+      <div className="md:container text-center space-y-10 pt-10 pb-32 mt-40">
 
           <div className="tag bg-white">
              Gallery
@@ -57,7 +57,7 @@ function Gallery({data}: {data: getImagesProps}) {
   
            <div 
           // className="border min-h-fit min-w-min flex flex-wrap flex-grow p-4 space-x-2 space-y-2"
-          className="flex flex-wrap border max-w-fit p-4 bg-white"
+          className="flex flex-wrap justify-center border max-w-fit p-4 bg-white"
           >
             {data?.map((gallery, index)=> (
               <div key={index}>

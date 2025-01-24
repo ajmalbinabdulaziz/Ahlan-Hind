@@ -41,7 +41,7 @@ async function page() {
             >  
             <div className="absolute z-10 mt-56 left-20 right-20 text-center text-4xl text-white font-bold">"A journey of a thousand miles begins with a single step."</div>
 
-            <div className="absolute opacity-60 bg-[radial-gradient(ellipse_150%_50%_at_top_left,#ebe6e1,#eb9d86_100%)] h-screen w-full" />
+            {/* <div className="absolute opacity-40 bg-[radial-gradient(ellipse_150%_50%_at_top,#faf5f2,#eb9d86_100%)] h-screen w-full" /> */}
           </div>
 
           <div className="mt-[300px] 

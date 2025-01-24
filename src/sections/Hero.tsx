@@ -33,9 +33,9 @@ export const Hero = () => {
                   </div>           
               </div>
 
-              <div className="mt-64 p-2 mx-auto w-auto border-white shadow-lg shadow-[#4b0328] overflow-visible">
+              {/* <div className=" mt-64 mb-10 bg-yellow-700 p-2 mx-auto w-auto border-white shadow-lg shadow-[#4b0328] overflow-visible">
                   <EnquiryForm />
-              </div>
+              </div> */}
 
             </div>
 

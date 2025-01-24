@@ -11,7 +11,7 @@ import { motion } from 'framer-motion'
 
 export const LogoTicker = () => {
   return (
-    <div className='mt-56 py-8 md:py-12 bg-white'>
+    <div className='mt-72 md:mt-52 pt-8 md:pt-12'>
       
       <div className='container'>
         <div className='flex overflow-hidden [mask-image:linear-gradient(to_right, transparent,black,transparent)] '>

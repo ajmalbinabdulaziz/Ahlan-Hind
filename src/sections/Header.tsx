@@ -25,7 +25,7 @@ export const Header = () => {
           <div className="flex justify-center gap-6">
           <SocialX />
           <SocialInsta />
-          <SocialLinkedin />
+          {/* <SocialLinkedin /> */}
           <SocialPin />
           <SocialYoutube />
         </div>
@@ -46,7 +46,7 @@ export const Header = () => {
               <a href="/about">About</a>
               <a href="/packages">Packages</a>
               <a href="/gallery">Gallery</a>
-              <a href="">Hospitality</a>
+              {/* <a href="">Hospitality</a> */}
 
               <a href="/contact">Contact</a>
 

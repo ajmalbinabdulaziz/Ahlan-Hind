@@ -16,16 +16,15 @@ function Content() {
                 
                 <div className="absolute z-10 mt-36 left-20 right-20 text-center "> 
 
-                    <p className="tag">Travel around</p>
+                    <p className="tag">About</p>
 
                     <p className="mt-10 text-5xl md:text-5xl font-bold text-white">About us</p>
                 
                     <p className="mt-10 text-3xl text-white font-bold">Get a Chance to know About Us and Relive Our Journey.</p>
-
-                    
+                   
                 </div>
 
-                <div className="absolute opacity-30 bg-[radial-gradient(ellipse_150%_50%_at_bottom_left,#75eb2d,#768071_100%)] h-screen w-full" />
+                {/* <div className="absolute opacity-30 bg-[radial-gradient(ellipse_150%_50%_at_bottom_left,#75eb2d,#768071_100%)] h-screen w-full" /> */}
 
             </div>
 

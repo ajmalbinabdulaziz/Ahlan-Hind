@@ -23,7 +23,7 @@ function EnquiryForm() {
         }}
     >
 
-        <div className="flex space-x-2">
+        <div className="flex flex-col md:flex-row space-x-2">
 
             <input placeholder="Full Name" required minLength={3} maxLength={15}
                 className="mb-5 shadow border rounded px-20 py-2 form-input mt-1 block w-full ring-[#780540] outline-none focus:ring" 
