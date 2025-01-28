@@ -23,20 +23,20 @@ async function page({ params }: { params: IParams }) {
 
       <div
           className="mt-2 pb-20 md:pt-5 md:pb-10 overflow-x-clip w-full h-screen 
-          bg-[url('/taj.jpg')] bg-cover bg-center bg-no-repeat 
+          bg-[url('/riverHouse.jpg')] bg-cover bg-center bg-no-repeat 
           fixed top-10 -z-10
           "
         >  
         <div className="absolute z-10 mt-56 left-20 right-20 text-center text-4xl text-white font-bold">"A journey of a thousand miles begins with a single step."</div>
 
-        <div className="absolute opacity-60 bg-[radial-gradient(ellipse_150%_50%_at_bottom_left,#75eb2d,#768071_100%)] h-screen w-full" />
+        <div className="absolute opacity-60 bg-[radial-gradient(ellipse_150%_50%_at_top_right,#eaede8,#1b1c1b_100%)] h-screen w-full" />
       </div>
 
       <div className='grid grid-cols-3 gap-10 mt-72 lg:grid-cols-3 px-10 py-4 bg-gray-50'>
 
             <article className='flex flex-col col-span-2 lg:pl-4 pr-0 mb-44 border-green-500'>
 
-                <h1 className='font-bold text-2xl text-stone-800 pt-7' >{postDataDetails?.title}  -  USD {postDataDetails?.price}</h1>
+                <h1 className='font-bold text-2xl text-stone-800 pt-7' >{postDataDetails?.title}  -  USD {postDataDetails?.price}/-</h1>
 
                 <hr className=" border-purple-500" />
 

@@ -23,8 +23,8 @@ export const CallToAction = () => {
         <div className="section-heading relative">
           <h2 className="text-center text-5xl md:text-5xl font-bold text-[#019c76] mt-6">Sign up to Explore</h2>
           <p className="section-description mt-5">
-          With a commitment to create and provide the best value for our clientele, our partners and our team, 
-          we at Ahlan-Hind welcome you to unlock the most beautiful destinations
+          India, always warm and inviting, is a place of infinite variety - one that favours you with a different 
+          facet of its fascination every time you come on a visit.
           </p>
           <motion.img 
             src={starImage.src} alt="Star Image" width={360} className="absolute -left-[350px] -top-[137px]" 
