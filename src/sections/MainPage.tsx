@@ -32,6 +32,7 @@ async function MainPage() {
               {/* <Pricing /> */}
               <Testimonials />
               <CallToAction />
+            
           </div>
         )
     }

@@ -5,6 +5,7 @@ import { Header } from "@/sections/Header";
 import { Footer } from "@/sections/Footer";
 import { ClerkProvider } from '@clerk/nextjs'
 import ToasterProvider from "@/components/ToasterProvider";
+import NewsLetter from "@/sections/NewsLetter";
 
 
 
@@ -30,6 +31,10 @@ export default async function RootLayout({
           <ToasterProvider />
           <Header />
             {children}
+            <div className="container mb-16 absolute bottom-56 left-10 right-10">
+                <NewsLetter />
+              </div>
+
           <Footer />
         </body>
       </html>

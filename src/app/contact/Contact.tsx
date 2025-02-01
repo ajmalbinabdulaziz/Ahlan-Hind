@@ -16,7 +16,9 @@ const Contact = () => {
 
 
   return (
-    <>
+    <section className="bg-[url('/Hogenakkal.jpg')] bg-cover bg-center bg-no-repeat ">
+      <div className="fixed opacity-30  bg-[radial-gradient(ellipse_150%_50%_at_bottom_left,#75eb2d,#768071_100%)] h-full w-full" />
+
     <Head>
       <title>Ajmal Codes | Contact</title>
       <link rel="icon" href="/favicon.ico" />
@@ -24,17 +26,17 @@ const Contact = () => {
     {submitted ? (<h3 className="text-center w-auto h-screen text-3xl pt-48 font-bold">Thank you for your message!</h3>)
     :
 
-      (<div className="grid grid-cols-1 px-5 pt-12 md:grid-cols-2  max-w-full">
+      (<div className="grid grid-cols-1 px-5 pt-12 md:grid-cols-2 max-w-full ">
 
-        <div className="">
+        <div className="text-white">
           <h2 className="font-bold text-2xl text-center p-5 mt-5">Feel free to ask us anything!</h2>
           <Image className="mx-auto m-5" src={CogImage} width={200} height={200} alt="" />
-          <p className="p-5">
+          <p className="p-5 text-white">
             If you have any suggestions, please let me know. Your suggestions are highly appreciated. Keep dropping your priceless opinions.
           </p>
         </div>
 
-        <div className="max-w-full">
+        <div className="max-w-full z-10">
       
           <form ref={ref} 
             action={async (formData) => {
@@ -43,7 +45,7 @@ const Contact = () => {
               await createEnquiry(formData)             
               toast.success('Enquiry submitted'); 
             }}
-            className="flex flex-col p-5 font-semibold font-sans">
+            className="flex flex-col p-5 font-semibold font-sans text-white">
             <label>FULL NAME</label>
             <input  required minLength={7} maxLength={15}
               className="mb-5 shadow border rounded py-1 form-input mt-1 block w-full ring-[#9ced6b] outline-none focus:ring" 
@@ -73,7 +75,8 @@ const Contact = () => {
         </div>
 
       </div>)}
-    </>
+
+    </section>
   )
 }
 
