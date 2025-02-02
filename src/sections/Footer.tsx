@@ -10,7 +10,7 @@ import SocialYoutube from "@/assets/social-youtube.svg"
 
 export const Footer = () => {
   return (
-    <footer className="bg-black text-[#BCBCBC] text-sm pt-56 pb-14 text-center">
+    <footer className="bg-black text-[#BCBCBC] text-sm pt-60 md:pt-48 pb-14 text-center">
         {/* <div className="container absolute bottom-[450px] md:bottom-[10px] left-10 right-10 
               mb-10 p-2 mx-auto w-auto border-white shadow-lg shadow-[#4b0328] overflow-visible">
                 <NewsLetter />
