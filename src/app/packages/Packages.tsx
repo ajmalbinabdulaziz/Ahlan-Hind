@@ -26,7 +26,7 @@ interface dataProps {
 
 function Packages( {data}: {data: dataProps} ) {
   return (
-    <div className="text-center pt-8">
+    <div className="text-center pt-8 bg-white">
       
       <div className="tag bg-white">
           Popular Packages

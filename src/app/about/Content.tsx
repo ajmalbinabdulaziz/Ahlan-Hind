@@ -8,19 +8,19 @@ function Content() {
     <section className="relative">
 
             <div
-                className=" pb-20 md:pt-5 md:pb-10 overflow-x-clip w-full h-screen 
+                className=" pb-20 mt-10 md:pt-5 md:pb-10 overflow-x-clip w-full h-screen 
                 bg-[url('/teaPlant.jpg')] bg-cover bg-center bg-no-repeat 
                 fixed top-10 -z-10
                 "
             >  
                 
-                <div className="absolute z-10 mt-36 left-20 right-20 text-center "> 
+                <div className="absolute z-10 mt-20 left-20 right-20 text-center "> 
 
                     <p className="tag">About</p>
 
                     <p className="mt-10 text-5xl md:text-5xl font-bold text-white">About us</p>
                 
-                    <p className="mt-10 text-3xl text-white font-bold">Get a Chance to know About Us and Relive Our Journey.</p>
+                    <p className="mt-10 text-xl md:text-3xl text-white font-bold">Get a Chance to know About Us and Relive Our Journey.</p>
                    
                 </div>
 
@@ -31,7 +31,7 @@ function Content() {
 
              {/* Carousal */}
 
-            <div className="md:grid grid-cols-3 gap-10 p-10 justify-around border bg-white mt-[300px] "> 
+            <div className="md:grid grid-cols-3 gap-10 p-10 justify-around border bg-white mt-[400px] "> 
 
                 <div className="col-span-2">
                     
@@ -62,7 +62,7 @@ function Content() {
 
                 </div>
 
-                <div className="col-span-1 px-24 md:hidden lg:inline lg:px-10 lg:mt-20">
+                <div className="col-span-1 mb-10 px-24 md:hidden lg:inline lg:px-10 lg:mt-20">
                     <HomeCarousel />
                 </div>
                     

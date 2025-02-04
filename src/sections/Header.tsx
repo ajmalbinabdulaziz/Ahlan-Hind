@@ -21,15 +21,14 @@ export const Header = () => {
   return (
     <header className='sticky top-0 backdrop-blur-sm z-20'>
 
-      <div className="flex justify-center items-center py-7 text-white text-sm bg-[#780540]">
-          <div className="flex justify-center gap-6">
+      {/* <div className="flex justify-center items-center py-7 text-white text-sm bg-[#780540]">
+        <div className="flex justify-center gap-6">
           <SocialX />
           <SocialInsta />
-          {/* <SocialLinkedin /> */}
           <SocialPin />
           <SocialYoutube />
         </div>
-      </div>
+      </div> */}
 
       <div className='py-5'>
         <div className='container'>

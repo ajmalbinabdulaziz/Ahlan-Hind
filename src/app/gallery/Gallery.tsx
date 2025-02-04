@@ -14,42 +14,22 @@ interface getImagesProps {
 
 function Gallery({data}: {data: getImagesProps}) {
   return (
-    // <section className="container text-center space-y-10 pt-10 pb-32">
-    //     <div className="tag">
-    //         Gallery
-    //     </div>
-  
-    //       <div 
-    //       // className="border min-h-fit min-w-min flex flex-wrap flex-grow p-4 space-x-2 space-y-2"
-    //       className="flex flex-wrap border max-w-fit p-4"
-    //       >
-    //         {data?.map((gallery, index)=> (
-    //           <div key={index}>
-    //              <Image src={urlFor(gallery?.mainImage).url()} width={500} height={300} alt="Wagamon" className="p-1 hover:scale-110 transition-transform duration-500" />   
-    //              <p className="font-mono">{gallery?.title}</p>
-    //           </div>
-    //         ))}
-    //       </div>
-          
-
-    // </section>
-
-
     <section className="relative">
 
       <div
-          className="mt-2 pb-20 md:pt-5 md:pb-10 overflow-x-clip w-full h-screen 
+          className="mt-10 pb-20 md:pb-10 overflow-x-clip w-full h-screen 
           bg-[url('/taj.jpg')] bg-cover bg-center bg-no-repeat 
           fixed top-10 -z-10
           "
         >  
-        <div className="absolute z-10 mt-56 left-20 right-20 text-center text-4xl text-white font-bold">"A journey of a thousand miles begins with a single step."</div>
 
         <div className="absolute opacity-60 bg-[radial-gradient(ellipse_150%_50%_at_bottom_left,#75eb2d,#768071_100%)] h-screen w-full" />
       </div>
 
 
       <div className="md:container text-center space-y-10 pt-10 pb-32 mt-40">
+
+          <div className="text-center text-2xl md:text-4xl text-white font-bold">"A journey of a thousand miles begins with a single step."</div>
 
           <div className="tag bg-white">
              Gallery

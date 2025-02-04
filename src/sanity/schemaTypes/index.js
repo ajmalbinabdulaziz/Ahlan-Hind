@@ -4,7 +4,9 @@ import {packagesType} from './packagesType'
 import {galleryType} from './galleryType'
 import {userType} from './userType'
 import {enquiryType} from './enquiryType'
+import {newsletterType} from './newsletterType'
+
 
 export const schema = {
-  types: [blockContentType, categoryType, galleryType, packagesType, userType, enquiryType ],
+  types: [blockContentType, categoryType, galleryType, packagesType, userType, enquiryType, newsletterType],
 }

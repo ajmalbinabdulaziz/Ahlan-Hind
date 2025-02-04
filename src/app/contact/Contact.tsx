@@ -16,7 +16,7 @@ const Contact = () => {
 
 
   return (
-    <section className="bg-[url('/Hogenakkal.jpg')] bg-cover bg-center bg-no-repeat ">
+    <section className="bg-[url('/Hogenakkal.jpg')] bg-cover bg-center bg-no-repeat">
       <div className="fixed opacity-30  bg-[radial-gradient(ellipse_150%_50%_at_bottom_left,#75eb2d,#768071_100%)] h-full w-full" />
 
     <Head>
@@ -31,12 +31,12 @@ const Contact = () => {
         <div className="text-white">
           <h2 className="font-bold text-2xl text-center p-5 mt-5">Feel free to ask us anything!</h2>
           <Image className="mx-auto m-5" src={CogImage} width={200} height={200} alt="" />
-          <p className="p-5 text-white">
+          <p className="p-5 text-white font-semibold">
             If you have any suggestions, please let me know. Your suggestions are highly appreciated. Keep dropping your priceless opinions.
           </p>
         </div>
 
-        <div className="max-w-full z-10">
+        <div className="max-w-full z-10 mb-16 md:mb-10">
       
           <form ref={ref} 
             action={async (formData) => {
