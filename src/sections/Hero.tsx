@@ -1,10 +1,13 @@
 import ArrowIcon from "@/assets/arrow-right.svg"
 import EnquiryForm from "./EnquiryForm";
-
-
+import {getTranslations} from 'next-intl/server';
+import { useTranslations } from 'next-intl';
 
  
 export const Hero = () => {
+
+  const t = useTranslations('HeroPage');
+  console.log(`${t('tag')}`)
 
   return(
     <section 
@@ -18,10 +21,12 @@ export const Hero = () => {
 
               <div className="md:w-[478px] mx-auto">
                   <div className="tag">
-                    Travel around.
+                    {/* Travel around. */}
+                    {t('tag')}
                   </div>
                   <h1 className="text-5xl md:text-5xl font-bold text-black mt-6">
-                    Welcome to Ahlan Hind!
+                  {t('title')}
+                    {/* Welcome to Ahlan Hind! */}
                   </h1>
                   <p className="text-xl text-[#4b0328] tracking-tight mt-6">
                   Hospitality is one of the most treasured values of Indian culture and lies at the heart of our desire to open our doors to 

@@ -12,7 +12,8 @@ import EnquiryForm from "./EnquiryForm"
 
 async function MainPage() {
 
-    const user: any = await currentUser();
+    // const user: any = await currentUser();
+    const user: any = true;
     if (!user) {
         // return NextResponse.redirect('http://localhost:3000/sign-in');
         return (
@@ -37,15 +38,15 @@ async function MainPage() {
         )
     }
   
-    const {id, username, firstName, lastName, emailAddresses} = user;
-    await client.createIfNotExists({
-      _type: "user",
-      _id: id,
-      username,
-      firstName,
-      lastName,
-      email: emailAddresses[0].emailAddress
-    })
+    // const {id, username, firstName, lastName, emailAddresses} = user;
+    // await client.createIfNotExists({
+    //   _type: "user",
+    //   _id: id,
+    //   username,
+    //   firstName,
+    //   lastName,
+    //   email: emailAddresses[0].emailAddress
+    // })
   
   return (
     <>

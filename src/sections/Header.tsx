@@ -14,6 +14,7 @@ import {
 } from '@clerk/nextjs'
 import { Button } from '@/components/ui/button'
 import { HamburgerMenu } from "@/components/HamburgerMenu"
+import LocaleSwitcher from "@/components/LocaleSwitcher";
 
 
 export const Header = () => {
@@ -48,6 +49,10 @@ export const Header = () => {
               {/* <a href="">Hospitality</a> */}
 
               <a href="/contact">Contact</a>
+
+            <div>
+            <LocaleSwitcher />  
+            </div>  
 
             <SignedIn>
                 <UserButton />
