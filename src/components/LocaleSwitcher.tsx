@@ -10,6 +10,7 @@ export default function LocaleSwitcher() {
   const router = useRouter();
   const params = useParams();
   const currentLocale = params.locale as string;
+  
 
   const handleLocaleChange = (newLocale: string) => {
     if (newLocale === currentLocale) return;

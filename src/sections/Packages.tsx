@@ -2,15 +2,18 @@ import Alleppey from "@/assets/alleppey.jpg"
 import Thekkady from "@/assets/thekkady.jpg"
 import Wagamon from "@/assets/wagamon.jpg"
 import Image from "next/image"
-import ArrowIcon from "@/assets/arrow-right.svg"
+// import ArrowIcon from "@/assets/arrow-right.svg"
 import { getPackages } from "../services"
 import { urlFor } from "../sanity/lib/image"
 import Link from "next/link"
+import { getTranslations } from "next-intl/server"
 
 
 async function Packages() {
 
   const postData = await getPackages()
+  const t = await getTranslations('PackagesPage')
+
 
   return (
     <section className="py-24 bg-white">
@@ -19,18 +22,17 @@ async function Packages() {
             <div className="flex flex-col">
 
                 <div className="tag mx-auto">
-                    Packages
+                    {t('Packages')}
                 </div>
                 
                 <div className="section-heading flex flex-col gap-2">
-                    <h2 className="text-center text-5xl md:text-5xl font-bold text-[#780540] mt-6">Explore the Packages</h2>
+                    <h2 className="text-center text-5xl md:text-5xl font-bold text-[#780540] mt-6">{t('Explore the Packages')}</h2>
                     <p className="section-description text-[#460225] mt-4">
-                        The South-west state of India, Kerala enjoys all the blessings of nature – a long coastline, 
-                        mountain stretches, meandering rivers, stunning water falls, dense forests, surf washed beaches, & dazzling monsoon.
+                        {t('para')}
                     </p>
                     <button className='btn btn-text gap-1'>
-                        <span>Read More</span>
-                        <ArrowIcon className="h-5 w-5" />
+                        <span>{t('read more')}</span>
+                        {/* <ArrowIcon className="h-5 w-5" /> */}
                   </button>
                 </div>
 

@@ -1,8 +1,37 @@
 {
-    "HeroPage": {
+  "Header": {
+    "Home": "Home",
+    "About": "About",
+    "Packages": "Packages",
+    "Gallery": "Gallery",
+    "Contact": "Contact"
+  },   
+  "HeroPage": {
       "tag": "Travel around",
       "title": "Welcome to Ahlan Hind!",
       "para": " Hospitality is one of the most treasured values of Indian culture and lies at the heart of our desire to open our doors to international travellers..",
-      "read more": "Read More"
-    }
-}
+      "read more": "Read More -->"
+    },
+  "ProductList": {
+    "Select your interests": "Select your interests",
+    "Trust our experience to share natural beauty!": "Trust our experience to share natural beauty!"
+  },
+  "Gallery": {
+    "Ayurveda Tourism": "Ayurveda Tourism",
+    "The Himalayas": "The Himalayas",
+    "Tajmahal": "Tajmahal",
+    "Andaman": "Andaman",
+    "Hogenakkal": "Hogenakkal"
+  },
+  "PackagesPage": {
+    "Packages": "Packages",
+    "Explore the Packages": "Explore the Packages",
+    "para": "The South-west state of India, Kerala enjoys all the blessings of nature – a long coastline, mountain stretches, meandering rivers, stunning water falls, dense forests, surf washed beaches, & dazzling monsoon.",
+    "read more": "Read More -->"
+  },
+  "TestimonialsPage": {
+    "Testimonials": "Testimonials",
+    "What our users say": "What our users say",
+    "para": "From intuitive design to powerful features, our app has become an essential tool for users around the world"
+  }
+} 

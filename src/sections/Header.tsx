@@ -15,9 +15,13 @@ import {
 import { Button } from '@/components/ui/button'
 import { HamburgerMenu } from "@/components/HamburgerMenu"
 import LocaleSwitcher from "@/components/LocaleSwitcher";
+import { useTranslations } from "next-intl";
 
 
 export const Header = () => {
+
+  const t = useTranslations('Header');
+
 
   return (
     <header className='sticky top-0 backdrop-blur-sm z-20'>
@@ -42,13 +46,11 @@ export const Header = () => {
             </div>
             <nav className='hidden md:flex gap-6 text-black/80 items-center'>
 
-              <a href="/">Home</a>
-              <a href="/about">About</a>
-              <a href="/packages">Packages</a>
-              <a href="/gallery">Gallery</a>
-              {/* <a href="">Hospitality</a> */}
-
-              <a href="/contact">Contact</a>
+              <a href="/">{t('Home')}</a>
+              <a href="/about">{t('About')}</a>
+              <a href="/packages">{t('Packages')}</a>
+              <a href="/gallery">{t('Gallery')}</a>
+              <a href="/contact">{t('Contact')}</a>
 
             <div>
             <LocaleSwitcher />  

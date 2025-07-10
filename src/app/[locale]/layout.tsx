@@ -11,7 +11,6 @@ import {NextIntlClientProvider, hasLocale} from 'next-intl';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 import { getMessages } from "next-intl/server";
-import LocaleSwitcher from "@/components/LocaleSwitcher";
 
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
@@ -38,7 +37,7 @@ export default async function RootLayout({
   return (
 
     <ClerkProvider>
-      <html lang={locale} className="relative">
+      <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className="relative">
         <body 
         // className={clsx(dmSans.className, "antialiased bg-[#EAEEFE]")}
         >

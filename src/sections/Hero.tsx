@@ -1,13 +1,14 @@
-import ArrowIcon from "@/assets/arrow-right.svg"
-import EnquiryForm from "./EnquiryForm";
-import {getTranslations} from 'next-intl/server';
+// import ArrowIcon from "@/assets/arrow-right.svg"
+// import EnquiryForm from "./EnquiryForm";
+// import {getLocale, getTranslations} from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 
  
-export const Hero = () => {
+export const  Hero = () => {
 
   const t = useTranslations('HeroPage');
-  console.log(`${t('tag')}`)
+  // console.log(`${t('tag')}`)
+
 
   return(
     <section 
@@ -29,12 +30,11 @@ export const Hero = () => {
                     {/* Welcome to Ahlan Hind! */}
                   </h1>
                   <p className="text-xl text-[#4b0328] tracking-tight mt-6">
-                  Hospitality is one of the most treasured values of Indian culture and lies at the heart of our desire to open our doors to 
-                  international travellers..
+                  {t('para')}
                   </p>
                   <div className="flex py-2">
-                    <p className="font-semibold ">Read More</p>
-                    <ArrowIcon className="h-5 w-5 pt-1" />
+                    <p className="font-semibold ">{t('read more')}</p>
+                    {/* <ArrowIcon className="h-5 w-5 pt-1" /> */}
                   </div>           
               </div>
 

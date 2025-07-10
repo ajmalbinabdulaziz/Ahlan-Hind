@@ -6,6 +6,7 @@ import tubeImage from "@/assets/tube.png"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 import Gallery from "@/components/Gallery"
+import { useTranslations } from "next-intl"
 
 
 export const ProductList = () => {
@@ -16,6 +17,7 @@ export const ProductList = () => {
     offset: ['start end', 'end start']
   })
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150])
+  const t = useTranslations('ProductList');
 
 
   return (
@@ -23,10 +25,10 @@ export const ProductList = () => {
       <div className="container">
         <div className="section-heading">
           <div className="flex justify-center">
-            <div className="tag">Select your interests</div>
+            <div className="tag">{t('Select your interests')}</div>
           </div>
             <h2 className="text-5xl md:text-5xl font-bold text-[#350ca8] mt-6 mb-10">
-                Trust our experience to share natural beauty!
+                    {t('Trust our experience to share natural beauty!')}
             </h2>
             {/* <p className="section-description mt-5 text-[#1c4205]">
               Effortlessly turn your ideas into a fully functional, responsive. Saas
