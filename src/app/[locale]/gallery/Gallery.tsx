@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { urlFor } from "@/sanity/lib/image"
+import { useTranslations } from "next-intl"
 
 
 interface getImagesProps {
@@ -13,6 +14,9 @@ interface getImagesProps {
 
 
 function Gallery({data}: {data: getImagesProps}) {
+
+  const t = useTranslations('Gallery');
+
   return (
     <section className="relative">
 

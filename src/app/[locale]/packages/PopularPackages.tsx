@@ -6,8 +6,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import { urlFor } from "@/sanity/lib/image"
 import Image from "next/image"
-import { urlFor } from "../../sanity/lib/image"
 
 
 

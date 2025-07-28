@@ -1,10 +1,11 @@
 import Image from "next/image"
-import { urlFor } from "../../sanity/lib/image"
 import Link from "next/link"
 import { FaStar } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoTime } from "react-icons/io5";
 import { HiUsers } from "react-icons/hi2";
+import { urlFor } from "@/sanity/lib/image";
+import { useTranslations } from "next-intl";
 
 
 interface dataProps {
@@ -25,14 +26,19 @@ interface dataProps {
 
 
 function Packages( {data}: {data: dataProps} ) {
+
+  const t = useTranslations('PackagesPage')
+
+
+
   return (
     <div className="text-center pt-8 bg-white">
       
       <div className="tag bg-white">
-          Popular Packages
+          {t('Popular Packages')}   
       </div>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3
+      <div dir="ltr" className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3
                 md:gap-6 p-3 md:px-1 max-w-6xl mx-auto mt-8'>
               {data?.map((_popularPackage: any, index: string) => (
                 <Link key={_popularPackage?._id} href={`/posts/${_popularPackage?.slug?.current}`} target="_blank">
@@ -45,7 +51,7 @@ function Packages( {data}: {data: dataProps} ) {
                           USD  {_popularPackage?.price}/-
                         </p>
 
-                        <div className="flex px-1 bg-white w-1/3 absolute top-4 left-6 right-2 font-medium">
+                        <div className="flex px-1 bg-white w-1/3 absolute top-4 left-6 right-2 font-medium ltr">
                           (5.0)
                           <p className="py-1"><FaStar color="gold" /></p>
                           <p className="py-1"><FaStar color="gold" /></p>
@@ -65,7 +71,7 @@ function Packages( {data}: {data: dataProps} ) {
                         </div>
 
                         <div className="py-2">
-                          <p className="w-2/3 text-black bg-yellow-400 p-2 mx-auto font-bold">Book Now</p>
+                          <p className="w-2/3 text-black bg-yellow-400 p-2 mx-auto font-bold">{t('Book Now')}</p>
                         </div>
                     </div>
                 </Link>

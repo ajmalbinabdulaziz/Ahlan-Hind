@@ -1,6 +1,6 @@
 'use client'
 import { urlFor } from "@/sanity/lib/image";
-import { myPortableTextComponents } from "../../../components/PortableTextComponents";
+import { myPortableTextComponents } from "@/components/PortableTextComponents";
 import { PortableText } from "next-sanity";
 import { getPackageDetails } from "@/services";
 import Image from "next/image";

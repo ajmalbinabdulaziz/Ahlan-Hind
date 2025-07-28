@@ -12,7 +12,7 @@ import { getTranslations } from "next-intl/server"
 async function Packages() {
 
   const postData = await getPackages()
-  const t = await getTranslations('PackagesPage')
+  const t = await getTranslations('PackagesSection')
 
 
   return (

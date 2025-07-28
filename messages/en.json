@@ -23,7 +23,7 @@
     "Andaman": "Andaman",
     "Hogenakkal": "Hogenakkal"
   },
-  "PackagesPage": {
+  "PackagesSection": {
     "Packages": "Packages",
     "Explore the Packages": "Explore the Packages",
     "para": "The South-west state of India, Kerala enjoys all the blessings of nature – a long coastline, mountain stretches, meandering rivers, stunning water falls, dense forests, surf washed beaches, & dazzling monsoon.",
@@ -33,5 +33,47 @@
     "Testimonials": "Testimonials",
     "What our users say": "What our users say",
     "para": "From intuitive design to powerful features, our app has become an essential tool for users around the world"
+  },
+  "CallToActionPage": {
+    "Sign up to Explore": "Sign up to Explore",
+    "para": "India, always warm and inviting, is a place of infinite variety - one that favours you with a different facet of its fascination every time you come on a visit.",
+    "Learn More": "Learn More"
+  },
+  "NewsLetter": {
+    "Newsletter": "Newsletter",
+    "para": "Type your email to be the first to get our offers and news",
+    "Sign Up": "Sign Up",
+    "Email": "Email",
+    "Full Name": "Full Name"
+  },
+  "AboutPage": {
+    "About": "About",
+    "About us": "About us",
+    "brief": "Get a Chance to know About Us and Relive Our Journey",
+    "title1": "Unlock millennia of history, culture, hospitality & nature",
+    "para1": "Gateway Malabar Holidays Pvt. Ltd. is an established Destination Management Company with multi operational offices in Kerala – the most exotic destination of India.",
+    "para2": "With a vision to grow as a renowned Destination Management Company, we set fresh trends, and establish new standards for best practices in the tourism industry, by exceeding customer expectations.",
+    "para3": "Our mission is to earn and maintain our clients’ trust at each one of our destinations by delivering services that exceed industry standards and customer expectations. We are also committed to meet client needs by providing exceptional product knowledge, creative solutions, cost effectiveness and value in every measurable way.",
+    "title2": "And there’s no better way to see Kerala than through us:",
+    "para4": "With a proven track record in customer satisfaction and service, along with the shorter accessibility time from the Airports, the number of tourists have increased steadily. We have successfully made a niche into the areas particular with Arab tourists coming to this eco-haven for holidaying, Ayurvedic health care or for any other intentions combined with tourism. We make sure that your holiday does exactly what it is meant for- To rejuvenate your body, mind and soul.",
+    "para5": "We are reputed travel planners, with years of experience catering exclusively to the Gulf clientele.",
+    "para6": "We offer sober and clean packages, with professional guidance made available at every lap of your journey. We have efficient guides well versed in Arabic as well as English, providing you with the most personalized attention, to make your experience worthier. We provide airport pick up, and drop, and ensure that you stay in the best places everywhere.",
+    "para7": "Now, all you need is to get in touch with us. And just take rest after that… For, we shall take care of the rest.",
+    "title3": "Our objectives:",
+    "list1": "Individual Travel Leisure Groups.",
+    "list2": "Meetings and Incentives.",
+    "list3": "Exclusive Round trip tours.",
+    "list4": "Best valued hotels and resorts.",
+    "list5": "Luxury Fleet of Vehicles.",
+    "list6": "Create and Explore new destinations.",
+    "para8": "With a commitment to create and provide the best value for our clientele, our partners and our team, we at Gateway Malabar Holidays welcome you to unlock the most exotic destination."
+  },
+  "PackagesPage": {
+    "title": "Packages",
+    "desc": "A journey of a thousand miles begins with a single step.",
+    "Popular Packages": "Popular Packages",
+    "Book Now": "Book Now"
   }
+
+
 } 

@@ -4,7 +4,7 @@ import Head from "next/head";
 import { useRef, useState } from "react";
 import CogImage from "@/assets/cog.png"
 import Image from "next/image";
-import { createEnquiry } from "../actions/createEnquiry";
+import { createEnquiry } from "@/app/actions/createEnquiry";
 import { toast } from "react-hot-toast";
 
 

@@ -7,8 +7,6 @@ import { useTranslations } from 'next-intl';
 export const  Hero = () => {
 
   const t = useTranslations('HeroPage');
-  // console.log(`${t('tag')}`)
-
 
   return(
     <section 

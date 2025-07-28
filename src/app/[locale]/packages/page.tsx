@@ -1,5 +1,6 @@
-import { getPackages } from "../../services"
+import { getPackages } from "@/services"
 import Packages from "./Packages"
+import { getTranslations } from "next-intl/server"
 
 
 interface getPackagesProps {
@@ -25,6 +26,7 @@ async function page() {
     return pack?.category?.title === "packages"
   }) 
 
+  const t = await getTranslations('PackagesPage')
 
   return (
       <section className="relative">
@@ -43,8 +45,8 @@ async function page() {
           <div className="mt-[100px] 
           overflow-x-clip pb-36">
             <div className="mb-32 text-center  text-white font-bold">
-              <p className="text-6xl py-8">Packages</p>
-              <p className="text-2xl">"A journey of a thousand miles begins with a single step."</p>
+              <p className="text-6xl py-8">{t('title')}</p>
+              <p className="text-2xl">{t('desc')}</p>
               
             </div>
 
