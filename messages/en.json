@@ -73,7 +73,20 @@
     "desc": "A journey of a thousand miles begins with a single step.",
     "Popular Packages": "Popular Packages",
     "Book Now": "Book Now"
+  },
+  "GalleryPage": {
+    "tag": "Gallery",
+    "title": "A journey of a thousand miles begins with a single step"
+  },
+  "Contact": {
+    "head": "Ajmal Codes | Contact",
+    "title": "Feel free to ask us anything, We would love to hear from you!",
+    "desc": "Whether you have a question about features, trials, pricing, need a demo, or anything else, our team is ready to answer all your questions",
+    "Full Name": "Full Name",
+    "Email": "Email",
+    "Phone": "Phone",
+    "Message": "Message",
+    "Submit": "Submit"
   }
-
 
 } 
