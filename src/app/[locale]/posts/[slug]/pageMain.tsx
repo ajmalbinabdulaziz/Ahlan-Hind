@@ -3,7 +3,7 @@ import { getPackageDetails } from "@/services"
 import { PortableText } from "next-sanity";
 import Head from "next/head";
 import Image from "next/image";
-import { myPortableTextComponents } from "../../../components/PortableTextComponents";
+import { myPortableTextComponents } from "@/components/PortableTextComponents";
 import { any } from "zod";
 
 
