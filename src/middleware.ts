@@ -8,7 +8,7 @@ const intlMiddleware = createMiddleware(routing)
 const isProtectedRoute = createRouteMatcher(['dashboard/(.*)'])
 
 export default clerkMiddleware(async (auth, req) => {
-  if (isProtectedRoute(req)) await auth.protect()
+  if (isProtectedRoute(req)) await auth().protect()
 
   return intlMiddleware(req)
 })
