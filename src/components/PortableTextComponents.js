@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image"
-import { urlFor } from '../sanity/lib/client'
+import { urlFor } from '../sanity/lib/image'
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
@@ -31,12 +31,12 @@ export const myPortableTextComponents = {
       return(
         <div className="relative bg-slate-700 rounded-md pt-6"> 
 
-          <div className="absolute right-1 top-1 text-white">
+          <div className="absolute inset-e-1 top-1 text-white">
           {language}
           </div>
 
           <CopyToClipboard text={code} onCopy={() => setCopy("Copied")}
-            className="border rounded p-1 w-min absolute right-1 top-10"
+            className="border rounded p-1 w-min absolute inset-e-1 top-10"
           >
             <div>
               <button className="text-green-500">{copy}</button>
