@@ -4,17 +4,21 @@ import { getTranslations } from "next-intl/server"
 
 
 interface getPackagesProps {
-  id: string
+  _id: string
   _createdAt: string
-  title: string
+  title?: string
+  localizedTitle: string
   slug: {
     current: string
   }
-  category: {
-    title: string
+  category?: {
+    title?: string
+    localizedTitle?: string
   }
-  price: string
-  mainImage: string
+  price?: string
+  localizedPrice: string
+  mainImage: any
+  localizedAlt: string
 }
 
 
@@ -24,7 +28,7 @@ async function page({ params }: { params: Promise<{ locale: string }> }) {
   const packages = await getPackages(locale)
 
     const allPackages = packages.filter((pack: getPackagesProps) => {
-    return pack?.category?.localizedTitle === "packages"
+    return pack?.category?.localizedTitle?.toLowerCase() === "packages"
   }) 
 
   const t = await getTranslations('PackagesPage')
