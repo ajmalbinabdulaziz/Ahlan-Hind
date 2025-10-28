@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLocalizedContent, useLocalizedBlockContent } from '../hooks/useLocalizedContent'
+import { useLocalizedContent, useLocalizedBlockContent, LocalizedContent } from '../hooks/useLocalizedContent'
 import { PortableText } from '@portabletext/react'
 
 interface LocalizedContentProps {
@@ -74,10 +74,12 @@ export function withLocalization<P extends object>(
   contentProp: string
 ) {
   return function LocalizedComponent(props: P) {
+    const contentValue = props[contentProp as keyof P] as LocalizedContent | null | undefined
+    const localizedContent = useLocalizedContent(contentValue as LocalizedContent | null | undefined)
     const localizedProps = {
       ...props,
-      [contentProp]: useLocalizedContent(props[contentProp as keyof P])
-    }
+      [contentProp]: localizedContent
+    } as P
 
     return <Component {...localizedProps} />
   }
