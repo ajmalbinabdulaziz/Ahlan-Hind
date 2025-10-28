@@ -33,6 +33,7 @@
     "puppeteer": "^23.9.0",
     "puppeteer-core": "^23.9.0",
     "react": "^18",
+    "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18",
     "react-hook-form": "^7.53.0",
     "react-hot-toast": "^2.4.1",
