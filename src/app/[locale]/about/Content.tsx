@@ -18,7 +18,7 @@ function Content() {
                 "
             >  
                 
-                <div className="absolute z-10 mt-20 left-20 right-20 text-center "> 
+                <div className="absolute z-10 mt-20 inset-s-20 inset-e-20 text-center "> 
 
                     <p className="tag">{t('About')}</p>
 

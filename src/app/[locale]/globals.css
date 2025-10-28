@@ -219,3 +219,80 @@
 
 
 }
+
+/* RTL Support - Logical Properties */
+@layer utilities {
+  /* Padding - Logical Properties */
+  .ps-0 { padding-inline-start: 0; }
+  .ps-1 { padding-inline-start: 0.25rem; }
+  .ps-2 { padding-inline-start: 0.5rem; }
+  .ps-3 { padding-inline-start: 0.75rem; }
+  .ps-4 { padding-inline-start: 1rem; }
+  .ps-5 { padding-inline-start: 1.25rem; }
+  .ps-6 { padding-inline-start: 1.5rem; }
+  .ps-10 { padding-inline-start: 2.5rem; }
+  
+  .pe-0 { padding-inline-end: 0; }
+  .pe-1 { padding-inline-end: 0.25rem; }
+  .pe-2 { padding-inline-end: 0.5rem; }
+  .pe-3 { padding-inline-end: 0.75rem; }
+  .pe-4 { padding-inline-end: 1rem; }
+  .pe-5 { padding-inline-end: 1.25rem; }
+  .pe-6 { padding-inline-end: 1.5rem; }
+  .pe-10 { padding-inline-end: 2.5rem; }
+  
+  /* Margin - Logical Properties */
+  .ms-0 { margin-inline-start: 0; }
+  .ms-1 { margin-inline-start: 0.25rem; }
+  .ms-2 { margin-inline-start: 0.5rem; }
+  .ms-3 { margin-inline-start: 0.75rem; }
+  .ms-4 { margin-inline-start: 1rem; }
+  .ms-auto { margin-inline-start: auto; }
+  
+  .me-0 { margin-inline-end: 0; }
+  .me-1 { margin-inline-end: 0.25rem; }
+  .me-2 { margin-inline-end: 0.5rem; }
+  .me-3 { margin-inline-end: 0.75rem; }
+  .me-4 { margin-inline-end: 1rem; }
+  .me-auto { margin-inline-end: auto; }
+  
+  /* Inset - Logical Properties */
+  .inset-s-0 { inset-inline-start: 0; }
+  .inset-s-1 { inset-inline-start: 0.25rem; }
+  .inset-s-2 { inset-inline-start: 0.5rem; }
+  .inset-s-3 { inset-inline-start: 0.75rem; }
+  .inset-s-10 { inset-inline-start: 2.5rem; }
+  .inset-s-20 { inset-inline-start: 5rem; }
+  .inset-s-32 { inset-inline-start: 8rem; }
+  .inset-s-36 { inset-inline-start: 9rem; }
+  
+  .inset-e-0 { inset-inline-end: 0; }
+  .inset-e-1 { inset-inline-end: 0.25rem; }
+  .inset-e-2 { inset-inline-end: 0.5rem; }
+  .inset-e-3 { inset-inline-end: 0.75rem; }
+  .inset-e-4 { inset-inline-end: 1rem; }
+  .inset-e-6 { inset-inline-end: 1.5rem; }
+  .inset-e-10 { inset-inline-end: 2.5rem; }
+  .inset-e-20 { inset-inline-end: 5rem; }
+  .inset-e-36 { inset-inline-end: 9rem; }
+  
+  /* Negative inset values */
+  .-inset-s-36 { inset-inline-start: -9rem; }
+  .-inset-e-36 { inset-inline-end: -9rem; }
+  
+  /* Support for arbitrary values via inline styles will be needed for specific cases */
+  
+  /* Text Alignment */
+  .text-start { text-align: start; }
+  .text-end { text-align: end; }
+  
+  /* Border Radius - Logical Properties */
+  .rounded-s { border-start-start-radius: 0.25rem; border-end-start-radius: 0.25rem; }
+  .rounded-e { border-start-end-radius: 0.25rem; border-end-end-radius: 0.25rem; }
+  .rounded-s-lg { border-start-start-radius: 0.5rem; border-end-start-radius: 0.5rem; }
+  .rounded-e-lg { border-start-end-radius: 0.5rem; border-end-end-radius: 0.5rem; }
+  
+  /* Border - Logical Properties */
+  .border-s { border-inline-start-width: 1px; }
+  .border-e { border-inline-end-width: 1px; }
+}

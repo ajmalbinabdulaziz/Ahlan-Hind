@@ -13,15 +13,16 @@ interface dataProps {
   map(arg0: (_popularPackage: any, index: string) => import("react").JSX.Element): import("react").ReactNode | Iterable<import("react").ReactNode>
   id: string
   _createdAt: string
-  title: string
+  localizedTitle: string
   slug: {
     current: string
   }
   category: {
-    title: string
+    localizedTitle: string
   }
-  price: string
-  mainImage: string
+  localizedPrice: string
+  localizedAlt: string
+  mainImage: any
 }
 
 
@@ -38,20 +39,20 @@ function Packages( {data}: {data: dataProps} ) {
           {t('Popular Packages')}   
       </div>
 
-      <div dir="ltr" className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3
                 md:gap-6 p-3 md:px-1 max-w-6xl mx-auto mt-8'>
               {data?.map((_popularPackage: any, index: string) => (
                 <Link key={_popularPackage?._id} href={`/posts/${_popularPackage?.slug?.current}`} target="_blank">
                     <div className='relative border mb-4 group cursor-pointer overflow-hidden'>
 
                         <Image className='h-80 w-full object-cover group-hover:scale-105
-                        transition-transform duration-200 ease-in-out' src={urlFor(_popularPackage?.mainImage).url()} width={400} height={400} alt="" />
+                        transition-transform duration-200 ease-in-out' src={urlFor(_popularPackage?.mainImage).url()} width={400} height={400} alt={_popularPackage?.localizedAlt || 'Package image'} />
 
-                        <p className="bg-black w-full absolute top-10 left-32 right-2 rotate-45 font-medium p-1 text-white">
-                          USD  {_popularPackage?.price}/-
+                        <p className="bg-black w-full absolute top-10 inset-s-32 inset-e-2 rotate-45 font-medium p-1 text-white">
+                          USD  {_popularPackage?.localizedPrice}/-
                         </p>
 
-                        <div className="flex px-1 bg-white w-1/3 absolute top-4 left-6 right-2 font-medium ltr">
+                        <div className="flex px-1 bg-white w-1/3 absolute top-4 inset-s-6 inset-e-2 font-medium">
                           (5.0)
                           <p className="py-1"><FaStar color="gold" /></p>
                           <p className="py-1"><FaStar color="gold" /></p>
@@ -60,14 +61,14 @@ function Packages( {data}: {data: dataProps} ) {
                           <p className="py-1"><FaStar color="gold" /></p>                  
                         </div>
 
-                        <div className="flex justify-around absolute bottom-40 left-4 right-6 font-medium">
+                        <div className="flex justify-around absolute bottom-40 inset-s-4 inset-e-6 font-medium">
                           <p className="py-1 text-white"><FaLocationDot color="gold" />Location</p>
                           <p className="py-1 text-white"><IoTime color="gold" />Days</p>
                           <p className="py-1 text-white"><HiUsers color="gold" />Pax</p>     
                         </div>
 
                         <div className="h-20 mt-2">
-                          <p className="text-lg text-center p-6 pt-1 font-bold">{_popularPackage?.title}</p>
+                          <p className="text-lg text-center p-6 pt-1 font-bold">{_popularPackage?.localizedTitle}</p>
                         </div>
 
                         <div className="py-2">

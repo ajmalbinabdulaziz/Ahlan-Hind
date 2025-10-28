@@ -7,14 +7,10 @@ import Image from "next/image";
 import EnquiryForm from "@/sections/EnquiryForm";
 
 
-interface IParams {
-  slug?: string;
-}
-
-
-async function page({ params }: { params: IParams }) {
-
-  const postDataDetails = await getPackageDetails(params?.slug)
+async function page({ params }: { params: Promise<{ slug: string; locale: string }> }) {
+  const { slug, locale } = await params
+  
+  const postDataDetails = await getPackageDetails(slug, locale)
 
   const port: any = myPortableTextComponents
 
@@ -36,12 +32,12 @@ async function page({ params }: { params: IParams }) {
 
             <article className='flex flex-col col-span-2 lg:pl-4 pr-0 mb-4 md:mb-44 border-green-500'>
 
-                <h1 className='font-bold text-2xl text-stone-800 pt-7' >{postDataDetails?.title}  -  USD {postDataDetails?.price}/-</h1>
+                <h1 className='font-bold text-2xl text-stone-800 pt-7' >{postDataDetails?.localizedTitle}  -  USD {postDataDetails?.localizedPrice}/-</h1>
 
                 <hr className=" border-purple-500" />
 
                 <div className="py-3 mt-2 mb-5">
-                  <PortableText value={postDataDetails?.body} components={port} />
+                  <PortableText value={postDataDetails?.localizedBody} components={port} />
                 </div>   
 
                 <hr className='max-w-full mt-5 border border-purple-500 border-t-0'/>                  
@@ -53,7 +49,7 @@ async function page({ params }: { params: IParams }) {
                 <Image
                   src={urlFor(postDataDetails?.mainImage?.asset).url()}
                   fill
-                  alt="Image"
+                  alt={postDataDetails?.localizedAlt || 'Package image'}
                 />
               </div>  
             </div> 

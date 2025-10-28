@@ -9,13 +9,18 @@ export const galleryType = defineType({
   fields: [
     defineField({
       name: 'title',
-      type: 'string',
+      type: 'object',
+      title: 'Title',
+      fields: [
+        { name: 'en', type: 'string', title: 'English' },
+        { name: 'ar', type: 'string', title: 'Arabic' },
+      ],
     }),
     defineField({
       name: 'slug',
       type: 'slug',
       options: {
-        source: 'title',
+        source: (doc) => doc.title?.en, // generate slug from English title by default
       },
     }),
     defineField({
@@ -27,8 +32,12 @@ export const galleryType = defineType({
       fields: [
         {
           name: 'alt',
-          type: 'string',
+          type: 'object',
           title: 'Alternative text',
+          fields: [
+            { name: 'en', type: 'string', title: 'English' },
+            { name: 'ar', type: 'string', title: 'Arabic' },
+          ],
         }
       ]
     }),

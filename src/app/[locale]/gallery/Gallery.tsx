@@ -7,8 +7,9 @@ interface getImagesProps {
   map(arg0: (gallery: any, index: any) => import("react").JSX.Element): import("react").ReactNode | Iterable<import("react").ReactNode>
   id: string
   _createdAt: string
-  title: string
-  mainImage: string
+  localizedTitle: string
+  mainImage: any
+  localizedAlt: string
 }
 
 
@@ -44,8 +45,8 @@ function Gallery({data}: {data: getImagesProps}) {
           >
             {data?.map((gallery, index)=> (
               <div key={index}>
-                 <Image src={urlFor(gallery?.mainImage).url()} width={500} height={300} alt="Wagamon" className="p-1 hover:scale-110 transition-transform duration-500" />   
-                 <p className="font-mono">{gallery?.title}</p>
+                 <Image src={urlFor(gallery?.mainImage).url()} width={500} height={300} alt={gallery?.localizedAlt || 'Gallery image'} className="p-1 hover:scale-110 transition-transform duration-500" />   
+                 <p className="font-mono">{gallery?.localizedTitle}</p>
               </div>
             ))}
           </div>

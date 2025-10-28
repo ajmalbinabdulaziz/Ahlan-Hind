@@ -20,25 +20,18 @@ export const  Hero = () => {
 
               <div className="md:w-[478px] mx-auto">
                   <div className="tag">
-                    {/* Travel around. */}
                     {t('tag')}
                   </div>
                   <h1 className="text-5xl md:text-5xl font-bold text-black mt-6">
                   {t('title')}
-                    {/* Welcome to Ahlan Hind! */}
                   </h1>
                   <p className="text-xl text-[#4b0328] tracking-tight mt-6">
                   {t('para')}
                   </p>
                   <div className="flex py-2">
                     <p className="font-semibold ">{t('read more')}</p>
-                    {/* <ArrowIcon className="h-5 w-5 pt-1" /> */}
                   </div>           
               </div>
-
-              {/* <div className=" mt-64 mb-10 bg-yellow-700 p-2 mx-auto w-auto border-white shadow-lg shadow-[#4b0328] overflow-visible">
-                  <EnquiryForm />
-              </div> */}
 
             </div>
 

@@ -9,13 +9,18 @@ export const postType = defineType({
   fields: [
     defineField({
       name: 'title',
-      type: 'string',
+      type: 'object',
+      title: 'Title',
+      fields: [
+        { name: 'en', type: 'string', title: 'English' },
+        { name: 'ar', type: 'string', title: 'Arabic' },
+      ],
     }),
     defineField({
       name: 'slug',
       type: 'slug',
       options: {
-        source: 'title',
+        source: (doc) => doc.title?.en, // generate slug from English title by default
       },
     }),
     defineField({
@@ -32,8 +37,12 @@ export const postType = defineType({
       fields: [
         {
           name: 'alt',
-          type: 'string',
+          type: 'object',
           title: 'Alternative text',
+          fields: [
+            { name: 'en', type: 'string', title: 'English' },
+            { name: 'ar', type: 'string', title: 'Arabic' },
+          ],
         }
       ]
     }),
@@ -48,12 +57,17 @@ export const postType = defineType({
     }),
     defineField({
       name: 'body',
-      type: 'blockContent',
+      type: 'object',
+      title: 'Body',
+      fields: [
+        { name: 'en', type: 'blockContent', title: 'English' },
+        { name: 'ar', type: 'blockContent', title: 'Arabic' },
+      ],
     }),
   ],
   preview: {
     select: {
-      title: 'title',
+      title: 'title.en',
       author: 'author.name',
       media: 'mainImage',
     },

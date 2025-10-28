@@ -27,8 +27,8 @@ function NewsLetter() {
         <div className="md:grid grid-cols-2 md:py-4">
 
             <div className="md:py-2">
-              <h1 className="text-center md:text-left md:ml-3 mt-3 text-2xl font-bold">{t('Newsletter')}</h1>
-              <h3 className="text-center md:text-left my-2 md:ml-3 mt-1 text-lg font-normal">
+              <h1 className="text-center md:text-start md:ms-3 mt-3 text-2xl font-bold">{t('Newsletter')}</h1>
+              <h3 className="text-center md:text-start my-2 md:ms-3 mt-1 text-lg font-normal">
                 {t('para')}
               </h3>
             </div>

@@ -24,7 +24,7 @@ function Gallery() {
                 alt="Image"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
-              <p className="absolute w-fit pr-10 right-1 left-3 bottom-2 bg-black/50 text-white text-sm">{t('Ayurveda Tourism')}</p>
+              <p className="absolute w-fit pe-10 inset-e-1 inset-s-3 bottom-2 bg-black/50 text-white text-sm">{t('Ayurveda Tourism')}</p>
             </div>
 
             <div className="hidden md:grid grid-rows-2 gap-2 min-h-full">
@@ -38,7 +38,7 @@ function Gallery() {
                           alt=""
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
-                        <p className="absolute w-fit pr-10 right-1 left-3 bottom-2 bg-black/50 text-white text-sm">{t('The Himalayas')}</p>
+                        <p className="absolute w-fit pe-10 inset-e-1 inset-s-3 bottom-2 bg-black/50 text-white text-sm">{t('The Himalayas')}</p>
                       </div>
                       <div className="relative hover:opacity-90 cursor-pointer ">  
                         <Image
@@ -47,7 +47,7 @@ function Gallery() {
                           alt=""
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
-                        <p className="absolute w-fit pr-10 right-1 left-3 bottom-2 bg-black/50 text-white text-sm">{t('Hogenakkal')}</p>
+                        <p className="absolute w-fit pe-10 inset-e-1 inset-s-3 bottom-2 bg-black/50 text-white text-sm">{t('Hogenakkal')}</p>
                       </div>
 
                   </div>
@@ -60,7 +60,7 @@ function Gallery() {
                           alt=""
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
-                        <p className="absolute w-fit pr-10 right-1 left-3 bottom-2 bg-black/50 text-white text-sm">{t('Tajmahal')}</p>
+                        <p className="absolute w-fit pe-10 inset-e-1 inset-s-3 bottom-2 bg-black/50 text-white text-sm">{t('Tajmahal')}</p>
                       </div>
                       <div className="relative hover:opacity-90 cursor-pointer"> 
                           <Image
@@ -69,7 +69,7 @@ function Gallery() {
                             alt=""
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           />
-                        <p className="absolute w-fit pr-10 right-1 left-3 bottom-2 bg-black/50 text-white text-sm">{t('Andaman')}</p>
+                        <p className="absolute w-fit pe-10 inset-e-1 inset-s-3 bottom-2 bg-black/50 text-white text-sm">{t('Andaman')}</p>
                       </div>
 
                   </div>

@@ -20,7 +20,7 @@ async function MainPage() {
             <div className="relative">
               <Hero />
               
-              <div className="container absolute top-[450px] md:top-[590px] left-10 right-10 
+              <div className="container absolute top-[450px] md:top-[590px] inset-s-10 inset-e-10 
               mb-10 p-2 mx-auto w-auto border-white shadow-lg shadow-[#4b0328] overflow-visible">
                 <EnquiryForm />
               </div>

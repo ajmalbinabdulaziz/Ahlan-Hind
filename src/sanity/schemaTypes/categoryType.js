@@ -9,18 +9,28 @@ export const categoryType = defineType({
   fields: [
     defineField({
       name: 'title',
-      type: 'string',
+      type: 'object',
+      title: 'Title',
+      fields: [
+        { name: 'en', type: 'string', title: 'English' },
+        { name: 'ar', type: 'string', title: 'Arabic' },
+      ],
     }),
     defineField({
       name: 'slug',
       type: 'slug',
       options: {
-        source: 'title',
+        source: (doc) => doc.title?.en, // generate slug from English title by default
       },
     }),
     defineField({
       name: 'description',
-      type: 'text',
+      type: 'object',
+      title: 'Description',
+      fields: [
+        { name: 'en', type: 'text', title: 'English' },
+        { name: 'ar', type: 'text', title: 'Arabic' },
+      ],
     }),
   ],
 })

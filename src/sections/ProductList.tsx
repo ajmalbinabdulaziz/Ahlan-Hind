@@ -40,11 +40,11 @@ export const ProductList = () => {
             <Gallery />
 
           <motion.img src={pyramidImage.src} alt="Pyramid Image" height={262} width={262} 
-            className="hidden md:block absolute -right-36 -top-32" 
+            className="hidden md:block absolute -inset-e-36 -top-32" 
             style={{ translateY }}
           />
           <motion.img src={tubeImage.src} alt="Tube Image" height={248} width={248} 
-            className="hidden md:block absolute bottom-24 -left-36" 
+            className="hidden md:block absolute bottom-24 -inset-s-36" 
             style={{ translateY }}
           />
         </div>

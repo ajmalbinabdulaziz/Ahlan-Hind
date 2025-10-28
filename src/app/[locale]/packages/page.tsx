@@ -18,12 +18,13 @@ interface getPackagesProps {
 }
 
 
-async function page() {
+async function page({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
 
-  const packages = await getPackages()
+  const packages = await getPackages(locale)
 
     const allPackages = packages.filter((pack: getPackagesProps) => {
-    return pack?.category?.title === "packages"
+    return pack?.category?.localizedTitle === "packages"
   }) 
 
   const t = await getTranslations('PackagesPage')

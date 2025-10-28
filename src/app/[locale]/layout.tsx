@@ -46,7 +46,7 @@ export default async function RootLayout({
             <Header />
               {/* <LocaleSwitcher /> */}
               {children}
-              <div className="md:container mb-16 absolute bottom-[350px] md:bottom-56 left-10 right-10">
+              <div className="md:container mb-16 absolute bottom-[350px] md:bottom-56 inset-s-10 inset-e-10">
                   <NewsLetter />
                 </div>
 
