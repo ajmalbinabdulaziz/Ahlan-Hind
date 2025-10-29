@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { LocalizedText, LocalizedImageAlt } from './LocalizedContent'
-import { useLocalizedContent } from '../hooks/useLocalizedContent'
+import { useLocalizedContent, useLocalizedImageAlt } from '../hooks/useLocalizedContent'
 
 interface Post {
   _id: string
