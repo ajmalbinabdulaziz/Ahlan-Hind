@@ -37,9 +37,10 @@ export async function testLocalization() {
     }
   } catch (error) {
     console.error('Localization test failed:', error)
+    const message = error instanceof Error ? error.message : String(error)
     return {
       success: false,
-      error: error.message
+      error: message
     }
   }
 }

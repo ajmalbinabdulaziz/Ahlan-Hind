@@ -14,7 +14,7 @@ interface Post {
     current: string
   }
   mainImage?: {
-    alt?: {
+    alt?: {    
       en?: string
       ar?: string
     }
