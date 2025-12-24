@@ -58,7 +58,7 @@ async function MainPage() {
       <LogoTicker />
 
       <ProductList />
-      {/* <ProductShowcase /> */}≠
+      {/* <ProductShowcase /> */}
       <Packages />
       {/* <PopularPackages /> */}
       {/* <Pricing /> */}

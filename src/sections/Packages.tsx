@@ -6,12 +6,13 @@ import Image from "next/image"
 import { getPackages } from "../services"
 import { urlFor } from "../sanity/lib/image"
 import Link from "next/link"
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
 
 
 async function Packages() {
 
-  const postData = await getPackages()
+  const locale = await getLocale()
+  const postData = await getPackages(locale)
   const t = await getTranslations('PackagesSection')
 
 
@@ -46,10 +47,10 @@ async function Packages() {
                     <div className='border p-1 mb-4 group cursor-pointer overflow-hidden'>
 
                         <Image className='h-48 w-full object-cover group-hover:scale-105
-                        transition-transform duration-200 ease-in-out' src={urlFor(data?.mainImage).url()} width={400} height={400} alt="" />
+                        transition-transform duration-200 ease-in-out' src={urlFor(data?.mainImage).url()} width={400} height={400} alt={data?.localizedAlt || ''} />
                 
                         <div className="h-16">
-                        <p className="text-lg text-center pt-1 font-bold">{data?.title}</p>
+                        <p className="text-lg text-center pt-1 font-bold">{data?.localizedTitle}</p>
                         </div>
                     </div>
                 </Link>
